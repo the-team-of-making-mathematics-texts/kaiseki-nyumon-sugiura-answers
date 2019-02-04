@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - sudo apt-get update && sudo apt-get install latexmk make texlive texlive-latex-extra
+
+  build:
+    commands:
+      - latexmk
+
+artifacts:
+  files: ["*.pdf"]
