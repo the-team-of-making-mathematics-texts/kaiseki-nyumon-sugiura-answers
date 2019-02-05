@@ -3,10 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - pwd
-      - cd /workdir
-      - pwd
-      - ls -a
+      - cp /workdir/.latexmkrc ./
       - latexmk
 
 artifacts:
