@@ -1,0 +1,61 @@
+\documentclass[dvipdfmx,uplatex,11pt]{jsarticle}
+%
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{bm}
+\usepackage{ascmac}
+\setcounter{tocdepth}{2}
+\usepackage{ulem}
+\usepackage{geometry}
+\usepackage{framed}
+\usepackage{latexsym}
+%
+\geometry{left=10mm,right=10mm,top=5mm,bottom=10mm}
+%
+\begin{document}
+%
+%
+%
+\section{第5章：級数}
+\subsection{p49}
+\noindent
+問3：$\sum a_n$が絶対収束するとき，$\sum a_n ^2$も絶対収束することを証明せよ．
+\\
+\textsl{Hint}：級数の定義をおさえる\\
+\dotfill
+
+\begin{leftbar}
+\begin{proof}
+
+級数$\sum a_n$が絶対収束するから，$\sum |a_n|$も収束する．\\
+また，$\sum a_n$が収束することから，$\displaystyle \lim_{n \to \infty} a_n=0$．
+したがって，
+\[
+1>0に対して，あるn_0 \in \mathbb{N}が存在して，n \ge n_0 \Rightarrow |a_n|<1
+\]
+が成り立つ．\\
+ここで，$|a_n|^2=|a_n ^2|$であり，\\
+\[ |a_n ^2| <1 \]
+が成り立つ．
+したがって，$\sum |a_n ^2|$は収束するから，$\sum a_n ^2$は絶対収束する．
+\end{proof}
+\end{leftbar}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
