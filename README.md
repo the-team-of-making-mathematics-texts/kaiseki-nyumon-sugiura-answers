@@ -14,4 +14,3 @@
 
 ### 5 章
 
-- [5-3.pdf](https://s3-ap-northeast-1.amazonaws.com/math-texts/sugiura/5-3.pdf)
