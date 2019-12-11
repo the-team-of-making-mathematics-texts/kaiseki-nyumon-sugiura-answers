@@ -1,0 +1,305 @@
+\documentclass[dvipdfmx,uplatex,11pt]{jsarticle}
+%
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{bm}
+\usepackage{ascmac}
+\setcounter{tocdepth}{2}
+\usepackage{ulem}
+\usepackage{siunitx}
+\usepackage{geometry}
+\usepackage{framed}
+\usepackage{latexsym}
+\everymath{\displaystyle}
+%
+\geometry{left=10mm,right=10mm,top=5mm,bottom=10mm}
+
+\makeatletter
+\renewcommand{\theequation}{
+\thesection.\arabic{equation}}
+\@addtoreset{equation}{section}
+
+\renewcommand{\thefigure}{
+\thesection.\arabic{figure}}
+\@addtoreset{figure}{section}
+
+\renewcommand{\thetable}{
+\thesection.\arabic{table}}
+\@addtoreset{table}{section}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{theo}{定理}[section]
+\newtheorem{defi}{定義}[section]
+\newtheorem{lemm}{補題}[section]
+\newtheorem{lproof}{証明}[section]
+\newtheorem{exam}{具体例}[section]
+%
+\renewcommand\proofname{\bf 証明}
+%
+\title{解析入門：解答集}
+\author{編集者：}
+\date{最終更新日：\today}
+%
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{実数と連続}
+
+\subsection{p16,17}
+
+\noindent
+問2：
+\\
+\textsl{Hint}：$(n!x)$が整数となる条件を丁寧に調べていく．\\
+\dotfill
+%
+% 
+%
+\\
+$n=1，2，\ldots$に対して，
+\[
+	f_{n} (x)=\lim_{m \to \infty} (\cos (n! \pi x)) ^{2m}
+\]
+とおく．
+ここで，$n!x \in \mathbb{Z}$のとき，
+\[
+	\cos (n! \pi x)=\pm 1
+\]
+$n!x \notin \mathbb{Z}$のときは，
+\[
+	|\cos (n! \pi x)|<1
+\]
+であるから，
+\[
+	f_{n} (x)=
+	\begin{cases}
+		1 \quad(x \in \mathbb{Z}) \\
+		0 \quad (x \notin \mathbb{Z})
+	\end{cases}
+\]
+となる．
+さて，$x \in \mathbb{R} \backslash\mathbb{Q}$であるならば，どんな$n \in \mathbb{N}$に対しても，$n! x$が整数とならない．\\
+$x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とすれば，$n$が$q$より十分大きく，$n \ge q$のとき，$n!x$は偶数．\\
+よって，
+\[
+	\lim_{n \to \infty} \left( \lim_{m \to \infty} (\cos (n! \pi x)) ^{2m} \right)=
+	\begin{cases}
+		1 \quad (x \in \mathbb{Q}) \\
+		0  \quad (x \in \mathbb{R} \backslash \mathbb{Q})
+	\end{cases}
+\]
+
+\newpage
+
+\noindent
+問3：
+\\
+\textsl{Hint}：$a=0$のときを考えればよいので，そのように式変形をしてみる．そのあとは$\varepsilon$を用いて，評価していく。\\
+\dotfill
+
+\begin{leftbar}
+	\begin{proof}
+		$\lim_{n \to \infty} a_n= a$は，$ \lim_{n \to \infty} (a_n - a)= 0$\\
+		と書き直せる．$b_n = a_n -a$とおくと，証明すべきことは，
+		\[
+			\lim_{n \to \infty} b_n=0，ならば \lim_{n \to \infty} \frac{b_1 + b_2 + \cdots +b_n}{n} = 0
+		\]
+		である．\par
+		ここで，任意の$\varepsilon > 0$に対して，ある自然数$n_1 \in \mathbb{N}$が存在し，$n \ge n_1$のとき
+		\[
+			|b_n|<\varepsilon
+		\]
+		であり，また，絶対値の性質により，
+		\[
+			\left| \frac{b_1 + b_2 + \cdots +b_n}{n} \right| <\frac{|b_1| + |b_2| + \cdots +|b_n|}{n}
+		\]
+		をがいえる．このとき，$n \ge n_1$をみたす$（b_n)_{n \in \mathbb{N}}$の項を$\varepsilon$でおきかえると，
+		\[
+			\left| \frac{b_1 + b_2 + \cdots +b_n}{n} \right| < \frac{|b_1|+ \cdots + |b_{n_1}|}{n} +\varepsilon
+		\]
+		という不等式を得る．\par
+		そこで，$n_2 \in \mathbb{N}$をとると，$n \ge n_2$のとき，
+		\[
+			\frac{|b_1|+ \cdots + |b_{n_1}|}{n} <\varepsilon
+		\]
+		であるとすると，$n \ge \max \{ n_1,n_2\}$のとき，
+		\[
+			\frac{|b_1|+ \cdots + |b_{n_1}|}{n} < \varepsilon
+		\]
+		となる．
+		ゆえに，このとき，
+		\[
+			\left| \frac{ b_1 + b_2 + \cdots +b_n}{n} \right|　< \varepsilon+\varepsilon=2\varepsilon
+		\]
+		よって示された．
+	\end{proof}
+\end{leftbar}
+
+\newpage
+
+\setcounter{equation}{0}
+\subsection{p16}
+\noindent
+問5：
+\\
+\textsl{Hint}：\\
+\dotfill
+%
+% 
+%
+\begin{leftbar}
+	\begin{proof}
+		$\mathbb{N} \ni m \ge 1$とする．$A \subset \mathbb{N}$が，与えられた条件を満たすとする．\par
+		イ)より，
+		\[ A \subset \{n \in \mathbb{N} \mid n \ge m\} \]
+		は明らか．\\
+		$H=\{0，1，\cdots，m-1\} \cup A$とおく．
+		\begin{equation}
+			0 \in H
+		\end{equation}
+		\begin{equation}
+			n \in H
+		\end{equation}
+		とする．\\
+		\[ n<m-1であれば，n+1 \in \{0，1，\cdots，m-1\}~より，n+1 \in H \]
+		\[ n=m-1であれば，n+1=m \in Aより，n+1 \in H\]
+		\[ n \ge mであれば，ロ)より，n+1 \in A \subset H \]
+		よって，
+		\[
+			n+1 \in H
+		\]
+		したがって，$H$は継承的であり，$\mathbb{N} \subset H$\\
+		つまり，\\
+		\[
+			\{0，1，\cdots，m-1\} \cup \{n \in \mathbb{N} \mid n \ge m \} \subset \{0，1，\cdots，m-1\} \cup A
+		\]
+		よって，
+		\[
+			\{n \in \mathbb{N}\mid n \ge m \} \subset A
+		\]
+		以上より，
+		\[
+			A=\{n \in \mathbb{N} \mid n \ge m\}
+		\]
+	\end{proof}
+\end{leftbar}
+
+\newpage
+
+\noindent
+問7：
+\\
+\textsl{Hint}：\\
+\dotfill
+
+\begin{leftbar}
+	\begin{proof}
+		$n$が自然数ならば，$n <k <n+1$となる自然数$k$は存在しないことを示す．\\
+		$n < k < n+1$となる自然数$k$が存在するとすると，辺々$n$を引いて，
+		\[ 0 < k - n < 1 \]
+		問6より，$k-n$は自然数である．よって，$0<a<1$となる自然数$a$が存在しないことを示せばよい．\\
+		\[ H=\{0\} \cup \{n \in \mathbb{N} \mid n \ge 1 \} \]
+		とおくと，
+		\begin{equation}
+			0 \in H
+		\end{equation}
+		\begin{equation}
+			0+1 \in H
+		\end{equation}
+		である．\\
+		また，$k \ge 1$となる$k \in \mathbb{N}$に対しては，$k +1 \ge 1$であり，$k+1 \in \{~n \in \mathbb{N}~|~n \ge 1 \} $となるため，$k+1 \in H$\\
+		よって$H$は継承的である．したがって，$\mathbb{N} \in H$\\
+		$H$の定め方より，$a \notin H$なので，$a \notin \mathbb{N}$となり，$0<a<1$となる自然数$a$は存在しない．
+	\end{proof}
+\end{leftbar}
+
+\newpage
+
+\setcounter{equation}{0}
+\subsection{p31}
+\noindent
+問2：
+\\
+\textsl{Hint}：\\
+\dotfill
+​
+\begin{leftbar}
+	\begin{proof}
+		二項定理を用いて$(a_n)_{n \in \mathbb{N}}$の一般項を展開すると，
+		\begin{eqnarray}
+			a_n & = & 1 + n \cdot \frac{1}{n} + \frac{n(n-1)}{2!} \cdot \frac{1}{n^2} + \cdots + \frac{n(n-1)\cdots(n-r+1)}{r!} \cdot \frac{1}{n^r} + \cdots \frac{n!}{n!} \cdot + \frac{1}{n^n} \nonumber  \\
+			& = & 1+ \frac{1}{1!} + \frac{1}{2!} \left(1- \frac{1}{n} \right) + \cdots + \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \cdots \left (1-\frac{r-1}{n} \right) + \cdots \nonumber +  \frac{1}{n!} \left(1 - \frac{1}{n} \right) \cdots \left(1- \frac{n-1}{n} \right) \label{p32.問2:1}
+		\end{eqnarray}
+		同様にして，$a_{n+1}$の展開式を得たとき，$ \frac{1}{n+1} < \frac{1}{n}$より，$r\in \{ 1，2，\cdots ，n\}$に対して，
+		\begin{equation}
+			\frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \cdots \left (1-\frac{r-1}{n} \right) < \frac{1}{r!} \cdot  \left(1 - \frac{1}{n+1} \right) \cdots \left (1-\frac{r-1}{n+1} \right)
+		\end{equation}
+		が成立する．これと，$a_{n+1}$の展開式のほうが，正の項を一つ多く含むことから，
+		\begin{equation}
+			a_{n} < a_{n+1} \quad (\forall n \ge 1)
+		\end{equation}
+		が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加．また，\eqref{p32.問2:1}より，
+		\begin{eqnarray}
+			\label{p32.問2:2}
+			a_n &<& 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{n!} \\
+			& < & 1 + \frac{1}{1!} + \frac{1}{2^2} + \cdots + \frac{1}{2^n} \\
+			& < & 2 + \frac{1}{2} \left( \frac{ 1 - 2^{1-n} }{ 1- \frac{1}{2} } \right)\\
+			& = & 2+ \frac{2^{1-n} -1}{2} \\
+			\label{p32.問2:3}
+			& < & 3
+		\end{eqnarray}
+		であるから，$a_n < 3$であり，また，
+		\begin{equation}
+			\label{p32.問2:4}
+			a_n > 1 + \frac{1}{1!} =2
+		\end{equation}
+		であるから，\eqref{p32.問2:3}，\eqref{p32.問2:4}より，$2<e<3$\\
+		また，\eqref{p32.問2:2}より，
+		\begin{equation}
+			\label{p32.問2:5}
+			\lim_{n \to \infty} a_n \le e
+		\end{equation}
+		であり，また，\eqref{p32.問2:1}より，
+		\begin{equation}
+			\label{p32.問2:6}
+			\lim_{n \to \infty} a_n \le a_n < 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{r!}
+		\end{equation}
+		\eqref{p32.問2:6}より，$r \to \infty$として，
+		\begin{equation}
+			\label{p32.問2:7}
+			\lim_{n \to \infty} a_n \ge e
+		\end{equation}
+		となり，\eqref{p32.問2:5}，\eqref{p32.問2:7}より，$\lim_{n \to \infty} a_n =e$を得る．
+	\end{proof}
+\end{leftbar}
+​
+\subsection{p72,73,74}
+
+
+​
+問4
+
+\newpage
+
+\section{微分法}
+
+\newpage
+
+\section{初等函数}
+
+\newpage
+
+\section{積分法}
+
+\newpage
+
+\section{級数}
+
+\end{document}
+
