@@ -238,103 +238,104 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		となり，\eqref{p32.問2:5}，\eqref{p32.問2:7}より，$\lim_{n \to \infty} a_n =e$を得る．
 	\end{proof}
 \end{leftbar}
+\newpage
 \subsection{p72,73,74}
 問4:
 \begin{itembox}[c]{補題1}
-	ノルムに関して, $| \| \bm x  \|- \| \bm y \| | \leq \| \bm x - \bm y \|$ が成り立つ. 
+	ノルムに関して, $| \| \bm x  \|- \| \bm y \| | \leq \| \bm x - \bm y \|$ が成り立つ.
 \end{itembox}
 \begin{proof} (補題1の証明)
-	絶対値の定義 ( $| a | : = \max \{ a , -a \}$ ) に立ち返ると, 
-%		
-		\[
-			\| \bm x  \|- \| \bm y \| \leq \| \bm x - \bm y \| , - \| \bm x  \| + \| \bm y \| \leq \| \bm x - \bm y \|
-		\]
-%		
-	なる二つの不等式を示せばよい. これは, 
-		\[
-			\| \bm x \| = \| \bm x - \bm y + \bm y \| \leq \| \bm x - \bm y \| + \| \bm y \|
-		\]
+	絶対値の定義 ( $| a | : = \max \{ a , -a \}$ ) に立ち返ると,
+	%		
+	\[
+		\| \bm x  \|- \| \bm y \| \leq \| \bm x - \bm y \| , - \| \bm x  \| + \| \bm y \| \leq \| \bm x - \bm y \|
+	\]
+	%		
+	なる二つの不等式を示せばよい. これは,
+	\[
+		\| \bm x \| = \| \bm x - \bm y + \bm y \| \leq \| \bm x - \bm y \| + \| \bm y \|
+	\]
 	より示される.
 \end{proof}
 \begin{itembox}[c]{補題2}
-	$\| \cdot \|_1 : \mathbb R^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{j=1} ^ n |x_j| \in \mathbb R$ とすると, 
-%		
-		\[
-			\exists M \in \mathbb R \ \mathrm{s.t.} \ \forall \bm x \in \mathbb R^n \text {に対して, } \| \bm x \|_1 \leq M | \bm x | 
-		\]
-%		
-	が成り立つ. 
+	$\| \cdot \|_1 : \mathbb R^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{j=1} ^ n |x_j| \in \mathbb R$ とすると,
+	%		
+	\[
+		\exists M \in \mathbb R \ \mathrm{s.t.} \ \forall \bm x \in \mathbb R^n \text {に対して, } \| \bm x \|_1 \leq M | \bm x |
+	\]
+	%		
+	が成り立つ.
 \end{itembox}
 \begin{proof} ( 補題2の証明 )
-	$M : = n$ とおく. $\bm x \in \mathbb R^n$ とする. 各 $j ( 1 \leq j \leq n )$ において, 
-%		
-		\[
-			| x_j | \leq | \bm x |
-		\]
-%		
-	が成り立つ. そこで, $j$ について足し合わせると, 
-%		
-		\[
-			| x_1 | + | x_2 | + \cdots | x_n | \leq | \bm x | + | \bm x | + \cdots | \bm x | = n | \bm x | = M | \bm x | 
-		\]
-%		
-	が成り立つ. 
+	$M : = n$ とおく. $\bm x \in \mathbb R^n$ とする. 各 $j ( 1 \leq j \leq n )$ において,
+	%		
+	\[
+		| x_j | \leq | \bm x |
+	\]
+	%		
+	が成り立つ. そこで, $j$ について足し合わせると,
+	%		
+	\[
+		| x_1 | + | x_2 | + \cdots | x_n | \leq | \bm x | + | \bm x | + \cdots | \bm x | = n | \bm x | = M | \bm x |
+	\]
+	%		
+	が成り立つ.
 \end{proof}
 \dotfill
 \begin{leftbar}
-\begin{proof}
-	まず, 
-%		
+	\begin{proof}
+		まず,
+		%		
 		\[
 			\exists P \in \mathbb R \ \mathrm{s.t.} \ \forall \bm x \in \mathbb R^n \text {に対して, } \| \bm x \| \leq P | \bm x | \ \ \ \cdots ( \ast )
 		\]
-%		
-	となることを示す. $\mathbb R^n$ の正規直交基底 を $\bm e_1 , \bm e_2 , \cdots , \bm e_n$ とする. $T : = \max \{ \| \bm e_j \| \mid 1 \leq j \leq n \}$ とおき, $M$ を補題のものとして, $P : = TM$ とおく. . $\bm x \in \mathbb R ^n$ を, 
-%		
+		%		
+		となることを示す. $\mathbb R^n$ の正規直交基底 を $\bm e_1 , \bm e_2 , \cdots , \bm e_n$ とする. $T : = \max \{ \| \bm e_j \| \mid 1 \leq j \leq n \}$ とおき, $M$ を補題のものとして, $P : = TM$ とおく. . $\bm x \in \mathbb R ^n$ を,
+		%		
 		\[
 			\bm x = ( x_1 , x_2 , \cdots , x_n )
 		\]
-%		
-	とすると, $\bm x = \sum_{j=1} ^ n x_j \bm e_j$ とかける. これと, ノルムのi) , ii) の条件から, 
-%		
+		%		
+		とすると, $\bm x = \sum_{j=1} ^ n x_j \bm e_j$ とかける. これと, ノルムのi) , ii) の条件から,
+		%		
 		\[
 			\| \bm x \| = \| \sum_{j=1} ^ n x_j \bm e_j \| \leq \sum | x_j | \| \bm e_j \| \leq T \sum | x_j | \leq T M | \bm x | = P | \bm x |
 		\]
-%		
-	が成り立つ. 以上より $( \ast )$ は成り立つ. これより, 函数 $\| \cdot \|$ が 連続函数になる事を示す. $\bm \alpha \in \mathbb R^n$ とする. $\varepsilon > 0$ とする. $\delta < \frac {\varepsilon} {P}$ を満たすようにとる. このとき, 
-	$\bm x \in \mathbb R^n$ かつ $| \bm x - \bm \alpha | < \delta$ とする. 
-%		
+		%		
+		が成り立つ. 以上より $( \ast )$ は成り立つ. これより, 函数 $\| \cdot \|$ が 連続函数になる事を示す. $\bm \alpha \in \mathbb R^n$ とする. $\varepsilon > 0$ とする. $\delta < \frac {\varepsilon} {P}$ を満たすようにとる. このとき,
+		$\bm x \in \mathbb R^n$ かつ $| \bm x - \bm \alpha | < \delta$ とする.
+		%		
 		\[
 			| \| \bm x \| - \| \bm \alpha \| | \leq \| \bm x - \bm \alpha \| \leq P | \bm x - \bm \alpha | < \varepsilon
-		\] 
-%		
-	よって, 連続である.  $\mathbb S^{n-1} : =\{ \bm x \in \mathbb R^n \mid | \bm x | = 1 \}$ なるコンパクト集合上で, $\| \cdot \|$ を考える. ノルムが連続であったことから, コンパクト集合上で最小値をとる. これを $m$ とする. この 
-	$m$ を用いると, 
-%		
+		\]
+		%		
+		よって, 連続である.  $\mathbb S^{n-1} : =\{ \bm x \in \mathbb R^n \mid | \bm x | = 1 \}$ なるコンパクト集合上で, $\| \cdot \|$ を考える. ノルムが連続であったことから, コンパクト集合上で最小値をとる. これを $m$ とする. この
+		$m$ を用いると,
+		%		
 		\[
 			\forall x \in \mathbb R^n \text {に対して, } m | \bm x | \leq \| \bm x \|
 		\]
-%		
-	が成り立つ事を示す. $\bm x \in \mathbb R^n$ とする. このとき, $\bm x / | \bm x | \in \mathbb S^{n-1}$ であることに注意すると, ( $\because | \bm x / | \bm x | | = | \bm x | / | \bm x | = 1 $ ) $m$ が最小値であることから, 
-%		
+		%		
+		が成り立つ事を示す. $\bm x \in \mathbb R^n$ とする. このとき, $\bm x / | \bm x | \in \mathbb S^{n-1}$ であることに注意すると, ( $\because | \bm x / | \bm x | | = | \bm x | / | \bm x | = 1 $ ) $m$ が最小値であることから,
+		%		
 		\[
 			m \leq \left \| \frac {\bm x} {| \bm x |} \right \|
 		\]
-%		
-	を満たす. 
-%		
+		%		
+		を満たす.
+		%		
 		\[
 			\left \| \frac {\bm x} {| \bm x |} \right \| = \frac {1} {| \bm x |} \| \bm x \|
 		\]
-%		
-	に注意すると, 
-%		
+		%		
+		に注意すると,
+		%		
 		\[
 			m | \bm x | \leq \| \bm x \|
 		\]
-%		
-	となる. 以上より, 示すべき題意は満たされた.	
-\end{proof}
+		%		
+		となる. 以上より, 示すべき題意は満たされた.
+	\end{proof}
 \end{leftbar}
 これは, なかなか背景を語るには, 奥深い問題です. まず, 注意しておくことは, この性質は有限次元の線型空間だからできる話だということです. 無限次元であれば, もう少し条件がないと無理です. ( そもそも一般にはユークリッド距離が入りません. ) 有限次元であれば, ノルムが定める位相というのが一意に定まるという事を言っています. それだけ有限次元の線型空間は「硬い」という風に定義づけることができるでしょう. \par
 次に証明の中で用いたテクニックです.  $\mathbb S^{n-1}$ を用いたところ. これは, 無限次元になっても用いられる手法です. 線型性がある操作や空間の中では, 綺麗な ( 空間全体に一様に広げていけそうな？ ) 図形の上でだけ考えておいて, あとは線型に伸ばすということで全体の性質をみるということがあります. ここではそれを行なっています. 函数解析学などでは, 無限次元上に定まる理論上重要な写像( いわゆる有界線型作用素 )に対してノルムを定めますが, それらのノルムは, 無限次元の球面だけで見れば良いという性質があったりします. \par
