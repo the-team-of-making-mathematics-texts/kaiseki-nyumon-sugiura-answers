@@ -252,7 +252,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		となり，\eqref{p32.問2:5}，\eqref{p32.問2:7}より，$\lim_{n \to \infty} a_n =e$を得る．
 	\end{proof}
 \end{leftbar}
-​
+​\newpage
 \subsection{p72,73,74}
 問4:\par 
 まず，二つの補題を証明する．\\
@@ -360,9 +360,43 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 最後に証明の中で出てきた $\| \cdot \| _ 1$ というノルムですが, これはマンハッタン距離と呼ばれる距離です. 解析などでは計算が楽に済むので利用されます. ( 他にも応用はいくつかあると思いますが, 僕は知りません笑)
 \newpage
 
+問5:\par 
+皆さんには, 冗長な指摘かもしれませんが, これ, 
+	\begin{itemize}
+		\item $C ( K )$ が線型空間であること
+		\item $\max \{ | f ( x ) \mid x \in K \}$ が存在していること
+\end{itemize}
+を確認しなければそもそもノルムを定義したことにならないです. 後輩とのゼミなどでこの辺りうっかりミスが多かったのでコメントしておきました. 
+​
+\dotfill
 
+\begin{leftbar}
+	\begin{proof}
+​
+	連続函数の定数倍, 連続函数の和が再び連続函数になることから, $C ( K )$ は線型空間になる. また, $K$ がcompactであるから, $f ( K )$ はである. また, $| \cdot |$ も連続函数であるから, $| f ( K ) |$ も compactである. 従って最
+	大値を持つから, $\| f \|$ なる値が存在していることがわかる. ノルムの条件を満たすことを示す. 
+		\begin{enumerate}
+			\item $\| f \| \geq 0$ であること
+				
+				\parindent=1zw 各 $x \in K$ に対して, $| f ( x ) | \geq 0$ である. 従って, $\| f \| = \max \{ | f ( x ) \mid x \in K \} \geq 0$
+				
+			\item $\| f \| = 0 \Leftrightarrow f = 0$ であること ( $f = 0$ は写像として定数函数 $0$ に等しいという意味です. )	
+				
+				$f = 0$ であれば, 各 $x \in K$ に対して $| f ( x ) | = 0$ であるから, $\| f \| = 0$ は明らか. 逆を示す. $\| f \| = 0$ とする. 各 $x \in K$ に対して, $| f ( x ) | = 0$ である. つまり $f ( x ) = 0$ . よって $f = 0$
+				
+			\item $\| f + g \| \leq \| f \| + \| g \|$ であること
+			
+				\begin{eqnarray*}
+					\| f + g \| & = & \max \{ | f ( x ) + g ( x ) \mid x \in K \} \\
+					& \leq & \max \{ | f ( x ) | + | g ( x ) | \mid x \in K \} \\
+					& = & \max \{ | f ( x ) |  \mid x \in K \} + \max \{ | g ( x ) |  \mid x \in K \} = \| f \| + \| g \|
+				\end{eqnarray*}
+		\end{enumerate}
+​
+	よって, 確かにノルムである. 
+\end{proof}
+\end{leftbar}
 \newpage
-
 \section{微分法}
 
 \newpage
