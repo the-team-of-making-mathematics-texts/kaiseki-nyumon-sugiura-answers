@@ -14,13 +14,6 @@
 %
 \geometry{left=10mm,right=10mm,top=5mm,bottom=10mm}
 %
-\theoremstyle{definition}
-\newtheorem{theo}{定理}[section]
-\newtheorem{prop}{命題}[section]
-\newtheorem{defi}{定義}[section]
-\newtheorem{lemm}{補題}[section]
-\newtheorem{exam}{具体例}[section]
-%
 \title{解析入門：解答集}
 \author{編集者：}
 \date{最終更新日：\today}
@@ -247,9 +240,9 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \end{leftbar}
 \subsection{p72,73,74}
 問4:
-\begin{lemm}
+\begin{itembox}[c]{補題1}
 	ノルムに関して, $| \| \bm x  \|- \| \bm y \| | \leq \| \bm x - \bm y \|$ が成り立つ. 
-\end{lemm}
+\end{itembox}
 \begin{proof} (補題1の証明)
 	絶対値の定義 ( $| a | : = \max \{ a , -a \}$ ) に立ち返ると, 
 %		
@@ -263,7 +256,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\]
 	より示される.
 \end{proof}
-\begin{lemm}
+\begin{itembox}[c]{補題2}
 	$\| \cdot \|_1 : \mathbb R^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{j=1} ^ n |x_j| \in \mathbb R$ とすると, 
 %		
 		\[
@@ -271,7 +264,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\]
 %		
 	が成り立つ. 
-\end{lemm}
+\end{itembox}
 \begin{proof} ( 補題2の証明 )
 	$M : = n$ とおく. $\bm x \in \mathbb R^n$ とする. 各 $j ( 1 \leq j \leq n )$ において, 
 %		
