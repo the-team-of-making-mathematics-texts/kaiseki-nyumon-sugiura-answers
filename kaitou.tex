@@ -391,6 +391,97 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \end{proof}
 \end{leftbar}
 \newpage
+
+問6:\\
+\dotfill
+\begin{leftbar}
+	\begin{proof}
+	収束先となる函数 $f$ を構成し, i) 収束先であること ii) 連続であること  を示す. 
+	
+	各 $x \in K$ において, 実数列 $( f_n ( x ) ) _ {n \in \mathbb N}$ はCauchy列である. 実際, 
+%		
+		\[
+			| f _n ( x ) - f _m ( x ) | \leq \max \{ | f_n ( x ) - f_m ( x ) \mid x \in K \} = \| f_n - f_m \| \to 0 \ ( n , m \to N )
+		\]
+%		
+	よりわかる. 実数の完備性から列 $( f_n ( x ) )$ は収束する. そこで, 
+%		
+		\[
+			f : K \ni x \mapsto \lim_{n \to \infty} f_n ( x ) \in \mathbb R
+		\]
+%		
+	と定める. この $f$ が i ) , ii ) を満たすことを示す. \\
+	i) を満たすこと. すなわち, 
+%		
+		\[
+			\forall \varepsilon > 0 \text {に対して, } \exists N \in \mathbb N \ \mathrm{s.t.} \ \forall n > N \text {に対して, } \| f_n - f \| < \varepsilon
+		\]
+%
+	を示す. ただし, $\| \cdot \|$ の定義から, $\| f_n - f \| < \varepsilon$ は, 
+%		
+		\[
+			\forall t \in K \text {に対して, } | f_n ( t ) - f ( t ) | < \varepsilon
+		\]
+%		
+	を示せばよいことに注意する. $( f_n )$ が一様ノルムに関してCauchyの収束条件を満たすことに $\varepsilon / 2 > 0$ を適用すると, ある自然数 $N_1$ が存在して, 
+%		
+		\[
+			\forall n , m > N _1 \text {に対して, } \| f_n - f_m \| < \varepsilon / 2
+		\]
+%		
+	を満たす. $N : = N_1$ とおく. $n > N$ , $t ¥in K$ とする. 列 $( f_n ( t ) )$ は $f (t)$ に収束するから, ある自然数 $N_2$ が存在して, 
+%		
+		\[
+			\forall m > N_2 \text {に対して, }| | f_{m} ( t ) - f ( t ) | < \varepsilon / 2
+		\] 
+%		
+	を満たす. そこで, $m > \max \{ N_1 , N_2 \}$ をとれば, 
+%		
+		\[
+			| f_n ( t ) - f ( t ) | \leq | f_n ( t ) - f_m ( t ) | + | f _m ( t ) - f ( t ) | \leq \| f_n - f_m \| + | f_m ( t ) - f ( t ) | < \varepsilon
+		\] 
+%		
+	となる. よって収束先である. \\
+	
+	ii) を満たすこと. すなわち, 各 $\alpha \in K$ において
+%		
+		\[
+			\varepsilon > 0 ¥text {に対して, } \exists \delta > 0 \ \mathrm{s.t.} \ \forall x \in K \ \mathrm{s.t.} \ d ( \alpha , x ) < \delta \text {に対して, } | f ( x ) - f ( \alpha ) | < \varepsilon
+		\]
+%		
+	を満たすことを示す. $\alpha \in K$ とする. $\varepsilon > 0$ とする. 列 $( f_n ( \alpha ) )$ が $f ( \alpha )$ に収束することから, ある自然数 $N_1$ が存在して, 
+%		
+		\[
+			\forall n > N_1 \text {に対して, } | f_n ( \alpha ) - f ( \alpha ) | < \varepsilon / 3
+		\]
+%	
+	が成り立つ. また, $( f_n )$ がCauchyの収束条件を満たすことから, ある自然数 $N_2$ が存在して, 
+%		
+		\[
+			\forall n , m > N_2 \text {に対して, } \| f_n - f_m \| < \varepsilon / 3 
+		\]
+%		
+	が成り立つ. $N : = \max \{ N_1 , N_2 \}$ とおく. $f_N$ は $K$ 上で連続であるから, $\alpha$ での連続性より, ある正数 $\delta'$ が存在して, 
+%		
+		\[
+			\forall x \in K \ \mathrm{s.t.} \ d ( \alpha , x ) < \delta' \text {に対して, } | f_N ( x ) - f_ N( \alpha ) | < \varepsilon / 3
+		\]
+%	
+	が成り立つ. $\delta : = \delta'$ とおく. $x \in K$ かつ $d ( \alpha , x ) < \delta$ とする. 
+%		
+		\[
+			| f ( x ) - f ( \alpha ) | \leq | f ( x ) - f_N ( x ) | + | f_N ( x ) - f_N ( \alpha ) | + | f_N ( \alpha ) - f ( \alpha ) | \leq \| f - f_N \| + \varepsilon / 3 + \| f - f_N \| < \varepsilon
+		\]
+%		
+	より $f$ は連続である. つまり $f \in C ( K )$ である. 
+	
+	\end{proof}
+\end{leftbar}
+これ, Compact上の連続函数であることはほとんど本質的なことに影響しません. 定義域がCompactである条件を外す代わりに, 有界連続函数に対して適用すれば同様の議論が成り立ちます. ( ただし, その場合, 最大値ではなく上限でノルムを定義することになります. ) もしくは, 定義域上でCompact - support ( あるCompact集合上で値をもち, それ以外では恒等的に0 ) など他にも少し条件を変えて修正することでいくつかの応用が存在します. また, 詳しく調べてないのでわかりませんが ,定義域が距離空間であることもあまり影響しなかったと思います. \par 
+函数解析における函数空間の一例です. このような $C(K)$ に相当する空間として, 微分可能函数空間などもあげられます. ここは, 深入りすると, それだけで大学一年間分の解析の授業ができるぐらいですので, ここで止めておきます. \\
+参考\par 
+宮寺功 関数解析 ( ちくま学芸出版 )\par 
+洲之内治男 関数解析入門 ( 近代ライブラリ社 )
 \section{微分法}
 
 \newpage
