@@ -34,7 +34,7 @@
 \\
 \begin{itembox}[c]{(1)}
     \begin{proof}
-$0，0' \in \mathbb{R}$がともに加法単位元の性質を満たすとする．\par 
+$0，0' \in K$がともに加法単位元の性質を満たすとする．\par 
 このとき，$0$が加法単位元の性質をもつことから，
 \[
     0'+0=0'
@@ -50,10 +50,9 @@ $0，0' \in \mathbb{R}$がともに加法単位元の性質を満たすとする
 これからただちに加法単位元の一意性が従う．
     \end{proof}
     \end{itembox}
-%
     \begin{itembox}[c]{(2)}
         \begin{proof}
-$a ,b \in \mathbb{R}$とし，
+$a ,b \in K$とし，
 \[
     a+b =0
 \]
@@ -64,10 +63,10 @@ $a ,b \in \mathbb{R}$とし，
 となり，加法逆元の一意性が従う．
         \end{proof}
     \end{itembox}
-%
+
     \begin{itembox}[c]{(3)}
         \begin{proof}
-$a \in \mathbb{R}$のとき，
+$a \in K$のとき，
 \begin{gather*}
     a+(-a)=0 \\
     \therefore (-a)+a =0
@@ -77,6 +76,37 @@ $a \in \mathbb{R}$のとき，
     (-a)+(-(-a))=0
 \]
 これと逆元の一意性により，$a=-(-a)$が従う．
+\end{proof}
+\end{itembox}
+\begin{itembox}[c]{(4)}
+    \begin{proof}
+    $a \in K$に対して，
+    \[
+        a+(-1)a=(1+(-1))a =0a =0
+    \]
+    であるから，$-a$が$a$の加法逆元であることと含めて主張が従う．
+    \end{proof}
+\end{itembox}
+\newpage 
+\begin{itembox}[c]{(5)}
+    \begin{proof}
+    (4)の結果を用いる．$a=-1$とすると，
+    \[
+        (-1)(-1)=-(-1)=1
+    \]
+    これが証明すべきことであった．
+    \end{proof}
+\end{itembox}
+\begin{itembox}[c]{(6)}
+    \begin{proof}
+    $a,b \in K$に対して，
+    \begin{align*}
+     a(-b)+ab & = a((-b)+b) \\
+     & = a0 \\
+    & =0 \\
+\therefore \quad & a(-b)=-ab 
+    \end{align*}
+$(-a)b = -ab$も同様にして示される．
 \end{proof}
 \end{itembox}
 %
@@ -109,13 +139,13 @@ $n!x \notin \mathbb{Z}$のときは，
 \[
 	f_{n} (x)=
 	\begin{cases}
-		1 \quad(x \in \mathbb{Z}) \\
-		0 \quad (x \notin \mathbb{Z})
+		1 \quad(n!x \in \mathbb{Z}) \\
+		0 \quad (n!x \notin \mathbb{Z})
 	\end{cases}
 \]
 となる．
 さて，$x \in \mathbb{R} \backslash\mathbb{Q}$であるならば，どんな$n \in \mathbb{N}$に対しても，$n! x$が整数とならない．\\
-$x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とすれば，$n$が$q$より十分大きく，$n \ge q$のとき，$n!x$は偶数．\\
+$x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とすれば，$n$が$q$より十分大きく，$n \ge q$のとき，$n!x$は整数．\\
 よって，
 \[
 	\lim_{n \to \infty} \left( \lim_{m \to \infty} (\cos (n! \pi x)) ^{2m} \right)=
@@ -243,7 +273,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\end{equation}
 		である．\\
 		また，$k \ge 1$となる$k \in \mathbb{N}$に対しては，$k +1 \ge 1$であり，$k+1 \in \{~n \in \mathbb{N}~|~n \ge 1 \} $となるため，$k+1 \in H$\\
-		よって$H$は継承的である．したがって，$\mathbb{N} \in H$\\
+		よって$H$は継承的である．したがって，$\mathbb{N} \subset H$\\
 		$H$の定め方より，$a \notin H$なので，$a \notin \mathbb{N}$となり，$0<a<1$となる自然数$a$は存在しない．
 	\end{proof}
 \end{leftbar}
@@ -296,7 +326,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		であり，また，\eqref{p32.問2:1}より，
 		\begin{equation}
 			\label{p32.問2:6}
-			\lim_{n \to \infty} a_n \le a_n < 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{r!}
+			\lim_{n \to \infty} a_n \ge a_n > 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{r!}
 		\end{equation}
 		\eqref{p32.問2:6}より，$r \to \infty$として，
 		\begin{equation}
