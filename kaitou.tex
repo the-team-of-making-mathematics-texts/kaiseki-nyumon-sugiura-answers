@@ -160,7 +160,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \noindent
 問3：
 \\
-\textsl{Hint}：$a=0$のときを考えればよいので，そのように式変形をしてみる．そのあとは$\varepsilon$を用いて，評価していく。\\
+\textsl{Hint}：$a=0$のときを考えればよいので，そのように式変形をしてみる．そのあとは$\varepsilon$を用いて，評価していく．\\
 \dotfill
 %
 \begin{leftbar}
@@ -336,6 +336,105 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		となり，\eqref{p32.問2:5}，\eqref{p32.問2:7}より，$\lim_{n \to \infty} a_n =e$を得る．
 	\end{proof}
 \end{leftbar}
+
+\subsection{p49}
+
+\begin{screen}
+	杉浦P49~2)(i)
+	発散する．\\
+	\dotfill \\
+	{\it Proof.}
+	\begin{eqnarray*}
+	\frac{2n^2}{n^3+1}=\frac{2/3}{n+1}+\frac{4n/3-2/3}{n^2-n+1}
+	\end{eqnarray*}
+	により
+	\begin{eqnarray*}
+	\sum \frac{2n^2}{n^3+1}&=&\sum \frac{2/3}{n+1}+\sum \frac{4n/3-2/3}{n^2-n+1} \\
+	&>&\sum \frac{2/3}{n+1} \rightarrow \infty
+	\end{eqnarray*}
+	\qed
+	\end{screen}
+	
+	\begin{screen}
+	(ii)収束する．\\
+	\dotfill \\
+	{\it Proof.}
+	\begin{eqnarray*}
+	\sum ^{\infty}_{n=1}\frac{\sqrt{n}}{1+n^2}<\sum \frac{\sqrt{n}}{n^2}=\sum^{\infty}_{n=1}\frac{1}{n^{3/2}}~\left(<1+\int^{\infty}_{1}\frac{dx}{x^{3/2}}=3\right)
+	\end{eqnarray*}
+	また
+	\begin{eqnarray*}
+	\sum \frac{1}{n^\alpha}
+	\end{eqnarray*}
+	が$\alpha >1$のときに収束することを用いることもできる．\qed
+	\end{screen}
+	\begin{screen}
+	(iii)$a=1$のときは収束，$a \neq 1$のときは発散する．$\\
+	\dotfill \\
+	{\it Proof.}\\
+	$a=1$のときは明らかに収束する．$\\
+	$a \neq 1$のとき，$a^x$の$x=0$のまわりでの$\mathrm{Taylor}$展開
+	\begin{eqnarray*}
+	a^x=1+(\log a)x+\frac{(\log a)^2}{2!}x^2+O(x^3)
+	\end{eqnarray*}
+	を用いて
+	\begin{eqnarray*}
+	\sum (a^{1/n}-1)&=&\sum \left\{ \frac{\log a}{n}+\frac{(\log a)^2}{2!n^2}+O\left(\frac{1}{n^3}\right)\right\}\\
+	&>&\sum \frac{\log a}{n} \rightarrow \infty\\
+	\end{eqnarray*}
+	\qed
+	\end{screen}
+	
+	\begin{screen}
+	(v)収束する．\\
+	\dotfill \\
+	{\it Proof.}\\
+	定理5.7（ダランベールの収束判定）より$a_n=n/2^n$とおくと
+	\begin{eqnarray*}
+	\lim_{n \to \infty}\frac{a_{n+1}}{a_n}=\lim_{n \to \infty}\frac{n+1}{n}\frac{2^n}{2^{n+1}}=\frac{1}{2}<1
+	\end{eqnarray*}
+	よって収束する．
+	\end{screen}
+	
+	\begin{screen}
+	(viii)
+	発散する．\\
+	\dotfill \\
+	{\it Proof.}
+	\begin{eqnarray*}
+	\frac{(1+n)^n}{n^{n+1}}>\frac{n^n}{n^{n+1}}=\frac{1}{n}
+	\end{eqnarray*}
+	より
+	\begin{eqnarray*}
+	\sum \frac{(1+n)^n}{n^{n+1}}>\sum \frac{1}{n} \rightarrow \infty
+	\end{eqnarray*}
+	よって発散する． \qed
+	\end{screen}
+	
+	\begin{screen}
+	(x)収束する．\\
+	\dotfill \\
+	{\it Proof.}\\
+	定理5.7（ダランベールの収束判定）より$a_n=\left(\dfrac{n}{n+1}\right)^{n^2}$とすると
+	\begin{eqnarray*}
+	\frac{a_{n+1}}{a_n}&=&\frac{(n+1)^{(n+1)^2}}{(n+2)^{(n+1)^2}}\frac{(n+1)^{n^2}}{n^{n^2}}=\frac{(n+1)^{n^2}}{n^{n^2}}\frac{(n+1)^{n^2}}{(n+2)^{n^2}}\frac{(n+1)^{2n+1}}{(n+2)^{2n+1}}\\
+	&=&\left(1+\frac{1}{n}\right)^{n^2}\left(1-\frac{1}{n+2}\right)^{n^2}\left(1-\frac{1}{n+2}\right)^{2n+1}
+	\end{eqnarray*}
+	ここで
+	\begin{eqnarray*}
+	\left(1+\frac{1}{n}\right)^{n^2}\left(1-\frac{1}{n+2}\right)^{n^2}=\left(1+\frac{1}{n(n+2)}\right)^{n^2}=\left(1+\frac{1}{n(n+2)}\right)^{n(n+2)}\left(1+\frac{1}{n(n+2)}\right)^{-2n}
+	\end{eqnarray*}
+	$とすることにより，右辺はe \times 1=eに収束．更に$
+	\begin{eqnarray*}
+	\left(1-\frac{1}{n+2}\right)^{2n+1}=\left\{\left(1-\frac{1}{n+2}\right)^{-(n+2)}\right\}^{-2}\left(1-\frac{1}{n+2}\right)^{-3}
+	\end{eqnarray*}
+	$とすることで，右辺は\dfrac{1}{e^2} \times 1=\dfrac{1}{e}に収束．よって$
+	\begin{eqnarray*}
+	\frac{a_{n+1}}{a_n}=e \times \frac{1}{e^2}=\frac{1}{e}<1
+	\end{eqnarray*}
+	よってこの級数は収束する．
+\end{screen}
+
 ​\newpage
 \subsection{p72,73,74}
 問4:\par 
