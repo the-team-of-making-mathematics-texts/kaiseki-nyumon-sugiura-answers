@@ -4,6 +4,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{enumitem}
 \usepackage{wrapfig}
+\usepackage{physics}
 \usepackage{bm}
 \usepackage{ascmac}
 \setcounter{tocdepth}{2}
@@ -339,8 +340,28 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 
 \subsection{p49}
 
+\subsection{p47 級数}
+
+(1)
+\begin{leftbar}
+	\begin{proof}
+		$\lim_{n \to \infty} \sqrt[n]{a_n} =r$であるから，$0<r<1$のとき，$r<k<1$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+		\[
+			n \ge n_1 \Longrightarrow a_n<k^n
+		\]
+		となる．ここで，定理5.5(比較判定法)と$\lim_{n \to \infty} k^n =0$より，$\sum a_n$は収束する．\par 
+		$r>1$のとき，$1>0$に対して，ある$n_2 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+		\[
+			n \ge n_2 \Longrightarrow a_n >1
+		\]
+		が成り立ち，$\lim_{n \to \infty} a_n \ne 0$となる．よって定理5.1~系の対偶により$\sum a_n$は発散する．
+	\end{proof}
+\end{leftbar}
+
+\newpage
+
 \begin{screen}
-	杉浦P49~2)(i)
+	杉浦P49~2)(i)\\
 	発散する．\\
 	\dotfill \\
 	{\it Proof.}
@@ -676,6 +697,124 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \newpage
 
 \section{積分法}
+
+
+\subsection{p239 一変数函数の積分}
+
+\begin{screen}
+	p239 \, (i) \par 
+	 $\tan \frac{x}{2}=t$とおくと，
+	\begin{align*}
+		\int_{0}^{\frac{\pi}{2}} \cfrac{\sin x}{1+\cos x} \, dx & = \int_{0}^{1} \cfrac{\cfrac{2t}{1+t^2}}{1+\cfrac{1-t^2}{1+t^2}} \cdot \cfrac{2}{1+t^2} \, dt \\
+		& = \int_{0}^{1} \frac{2t}{1+t^2} \, dt \\
+		& = \Bigl[\log (t^2+1)\Bigl]_{0}^{1} \\
+		& = \log 2-0 = \log 2
+	\end{align*}
+\end{screen}
+
+\begin{screen}
+	p239 \, (ii) \par
+	  $x-a = \sin \theta$\,($ -\pi \le \theta < \pi$)とする置換を用いる．
+	\begin{align*}
+		\int_{0}^{a} \sqrt{2ax-x^2} \, dx & = \int_{0}^{a} \sqrt{-(x-a)^2+a^2} \, dx \\
+		& = \int_{-\frac{\pi}{2}}^{0} a \sqrt{1-\sin ^2 \theta } \cdot a\cos \theta \, d \theta \\
+		& = \int_{-\frac{\pi}{2}}^{0} a |\cos \theta| \cdot a\cos \theta \, d \theta \\
+		& = \int_{-\frac{\pi}{2}}^{0} a^2 \cos^2 \theta \, d \theta \\
+		& = \int_{-\frac{\pi}{2}}^{0} a^2 \left (\frac{1+\cos 2 \theta }{2}\right) \, d \theta \\
+		& = \frac{1}{2} a^2 \left [\theta + \frac{1}{2}\sin 2 \theta \right ]_{-\frac{\pi}{2}}^{0} \\
+		&= \frac{\pi a^2}{4}
+	\end{align*}
+\end{screen}
+
+\begin{screen}
+	p239 (iii) 
+	\begin{align*}
+		|\sin 2 \theta| =
+		\begin{cases}
+			\sin 2 \theta & \qq*{$0 \le \theta < \frac{\pi}{2}$のとき}\\
+			- \sin 2 \theta & \qq*{$\frac{\pi}{2}\le \theta \le \pi$のとき}
+		\end{cases}
+	\end{align*}
+		なので，
+		\begin{align*}
+			\int_{0}^{\pi} |\sin 2 \theta| \, d \theta & = \int_{0}^{\frac{\pi}{2}} \sin 2 \theta \, d \theta +\int_{\frac{\pi}{2}}^{\pi} (-\sin 2 \theta) \, d \theta \\
+			&= \left [-\frac{\cos 2 \theta}{2}\right]_{0}^{\frac{\pi}{2}} + \left [\frac{\cos 2 \theta}{2}\right]_{\frac{\pi}{2}}^{\pi} \\
+			& = -\frac{(-1-1)}{2} + \frac{1+1}{2} = 2
+		\end{align*}
+	\end{screen}
+
+	\begin{screen}
+		p239 (iv) 
+		\begin{align*}
+			\int_{0}^{\pi} e^{inx} \, dx  =
+			\begin{cases}
+				2 \pi & \qq*{$n=0$のとき} \\
+				0 & \qq*{$n \in \mathbb{Z}\setminus \{0\}$のとき}
+			\end{cases}
+		\end{align*}
+		である．$n=0$のときは
+		\begin{align*}
+			\int_{0}^{2 \pi} e^{inx} \, dx & = \int_{0}^{2\pi} \, dx \\
+			& = \Bigl[x\Bigl]_{0}^{2\pi} = 2\pi
+		\end{align*}
+		となり，$n \ne 0$のときは
+		\begin{align*}
+			\int_{0}^{2\pi} e^{inx} \, dx & = \left [\frac{e^{inx}}{in} \right ]_{0}^{2\pi} \\
+			& = \frac{1}{in} (1-1)=0
+		\end{align*}
+		となる．
+	\end{screen}
+
+	\begin{screen}
+		p239 (v) \par 
+		$m=n$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos m x \sin nx \, dx & = \int_{0}^{2\pi} \cos mx \sin mx \, dx \\
+			& = \int_{0}^{2\pi} \left (\frac{\sin 2mx + \sin 0}{2}\right ) \, dx \\
+			& = \left [-\frac{\cos 2mx}{2m}\right ]_{0}^{2\pi} =0
+		\end{align*}
+		となる．$m \ne n$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \sin nx \, dx & = \int_{0}^{2\pi} \left (\frac{\sin (m+n)x + \sin (n-m)x}{2}\right) \, dx \\
+			& = \frac{1}{2}\left [\frac{\sin (m+n)x}{m+n}+\frac{\sin (n-m)x}{n-m} \right]_{0}^{2\pi} =0
+		\end{align*}
+		である，ここまでの議論と，$m$と$n$の対称性により，
+			\[
+				\int_{0}^{2\pi} \cos mx \sin nx \, dx =\int_{0}^{2\pi} \sin mx \cos nx \, dx =0 ~(n,m \in \mathbb{N})
+			\]
+		となる．
+	\end{screen}
+
+	\begin{screen}
+		p239 (vi) \par 
+		$m \ne n$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \cos nx \, dx & = \int_{0}^{2\pi} \left (\frac{\cos(m+n)x+\cos(n-m)x}{2}\right) \, dx\\
+			& = \frac{1}{2} \left [\frac{\sin (m+n)x}{m+n}+\frac{\sin(n-m)x}{n-m}\right]_{0}^{2\pi} \\
+			& = 0-0 =0
+		\end{align*}
+		となる．$m =n \ne 0$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \cos nx \, dx & = \int_{0}^{2\pi} \cos^2 mx \, dx \\
+			& = \int_{0}^{2\pi} \left (\frac{1+\cos 2mx}{2}\right) \, dx  \\
+			& = \left [\frac{x}{2}+\frac{\sin 2mx}{4m}\right]_{0}^{2\pi} = \pi
+		\end{align*}
+		となる．$m =n =0$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \cos nx \, dx & = \int_{0}^{2\pi} dx \\
+			& = \Bigl[x\Bigl]_{0}^{2\pi} = 2\pi
+		\end{align*}
+		となる，以上をまとめて，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \cos nx \, dx =
+			\begin{cases}
+				0 & \qq*{$m \ne n$のとき}\\
+				\pi & \qq*{$m = n\ne 0$のとき}\\
+				2 \pi & \qq*{$m=n=0$のとき}
+			\end{cases}
+		\end{align*}
+		である．
+	\end{screen}
 
 \newpage
 
