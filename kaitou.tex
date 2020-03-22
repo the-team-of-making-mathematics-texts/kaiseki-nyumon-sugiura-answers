@@ -292,7 +292,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		二項定理を用いて$(a_n)_{n \in \mathbb{N}}$の一般項を展開すると，
 		\begin{eqnarray}
 			a_n & = & 1 + n \cdot \frac{1}{n} + \frac{n(n-1)}{2!} \cdot \frac{1}{n^2} + \cdots + \frac{n(n-1)\cdots(n-r+1)}{r!} \cdot \frac{1}{n^r} + \cdots \frac{n!}{n!} \cdot + \frac{1}{n^n} \nonumber  \\
-			& = & 1+ \frac{1}{1!} + \frac{1}{2!} \left(1- \frac{1}{n} \right) + \cdots + \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \cdots \left (1-\frac{r-1}{n} \right) + \cdots \nonumber +  \frac{1}{n!} \left(1 - \frac{1}{n} \right) \cdots \left(1- \frac{n-1}{n} \right) \label{p32.問2:1}
+			& = & 1+ \frac{1}{1!} + \frac{1}{2!} \left(1- \frac{1}{n} \right) + \cdots + \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \cdots \left (1-\frac{r-1}{n} \right) + \cdots \nonumber +  \frac{1}{n!} \left(1 - \frac{1}{n} \right) \cdots \left(1- \frac{n-1}{n} \right) \label{p32 問2 1}
 		\end{eqnarray}
 		同様にして，$a_{n+1}$の展開式を得たとき，$ \frac{1}{n+1} < \frac{1}{n}$より，$r\in \{ 1，2，\cdots ，n\}$に対して，
 		\begin{equation}
@@ -302,38 +302,38 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\begin{equation}
 			a_{n} < a_{n+1} \quad (\forall n \ge 1)
 		\end{equation}
-		が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加．また，\eqref{p32.問2:1}より，
+		が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加．また，\eqref{p32 問2 1}より，
 		\begin{eqnarray}
-			\label{p32.問2:2}
+			\label{p32 問2 2}
 			a_n &<& 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{n!} \\
 			& < & 1 + \frac{1}{1!} + \frac{1}{2^2} + \cdots + \frac{1}{2^n} \\
 			& < & 2 + \frac{1}{2} \left( \frac{ 1 - 2^{1-n} }{ 1- \frac{1}{2} } \right)\\
 			& = & 2+ \frac{2^{1-n} -1}{2} \\
-			\label{p32.問2:3}
+			\label{p32 問2 3}
 			& < & 3
 		\end{eqnarray}
 		であるから，$a_n < 3$であり，また，
 		\begin{equation}
-			\label{p32.問2:4}
+			\label{p32 問2 4}
 			a_n > 1 + \frac{1}{1!} =2
 		\end{equation}
-		であるから，\eqref{p32.問2:3}，\eqref{p32.問2:4}より，$2<e<3$\\
-		また，\eqref{p32.問2:2}より，
+		であるから，\eqref{p32 問2 3}，\eqref{p32 問2 4}より，$2<e<3$\\
+		また，\eqref{p32 問2 2}より，
 		\begin{equation}
-			\label{p32.問2:5}
+			\label{p32 問2 5}
 			\lim_{n \to \infty} a_n \le e
 		\end{equation}
-		であり，また，\eqref{p32.問2:1}より，
+		であり，また，\eqref{p32 問2 1}より，
 		\begin{equation}
-			\label{p32.問2:6}
+			\label{p32 問2 6}
 			\lim_{n \to \infty} a_n \ge a_n > 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{r!}
 		\end{equation}
-		\eqref{p32.問2:6}より，$r \to \infty$として，
+		\eqref{p32 問2 6}より，$r \to \infty$として，
 		\begin{equation}
-			\label{p32.問2:7}
+			\label{p32 問2 7}
 			\lim_{n \to \infty} a_n \ge e
 		\end{equation}
-		となり，\eqref{p32.問2:5}，\eqref{p32.問2:7}より，$\lim_{n \to \infty} a_n =e$を得る．
+		となり，\eqref{p32 問2 5}，\eqref{p32 問2 7}より，$\lim_{n \to \infty} a_n =e$を得る．
 	\end{proof}
 \end{leftbar}
 
@@ -713,7 +713,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 
 \begin{screen}
 	p239 \, (ii) \par
-	  $x-a = \sin \theta$\,($ -\pi \le \theta < \pi$)とする置換を用いる．
+	  $x-a=a \sin \theta$\,($ -\pi \le \theta < \pi$)とする置換を用いる．
 	\begin{align*}
 		\int_{0}^{a} \sqrt{2ax-x^2} \, dx & = \int_{0}^{a} \sqrt{-(x-a)^2+a^2} \, dx \\
 		& = \int_{-\frac{\pi}{2}}^{0} a \sqrt{1-\sin ^2 \theta } \cdot a\cos \theta \, d \theta \\
