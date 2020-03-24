@@ -456,6 +456,25 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \end{screen}
 
 ​\newpage
+
+(3)
+\begin{leftbar}
+	\begin{proof}
+		$\sum a_n $が絶対収束するので，$\sum |a_n|$も収束する．
+		よって，定理5.1 系より，$\lim_{n \to \infty} |a_n| =0$となる．
+		このとき，$1>0$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+		\[
+			n \ge n_1 \Longrightarrow ||a_n| -0|<1
+		\]
+		が成り立つ．また，$|a_n|<1$のとき，
+		\[
+			0 \le |{a_n}^2| \le {|a_n|}^2 < |a_n|
+		\]
+		が成り立つ．ここで，$\sum |a_n|$が収束し，各項は正なので， 定理5.5(比較判定法)により，$\sum |{a_n}^2|$も収束する．ゆえに$\sum {a_n}^2$は絶対収束する．
+	\end{proof}
+\end{leftbar}
+
+\newpage
 \subsection{p72,73,74}
 問4:\par 
 まず，二つの補題を証明する．\\
