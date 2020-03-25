@@ -11,6 +11,13 @@
 \usepackage{framed}
 \usepackage{latexsym}
 \everymath{\displaystyle}
+
+\theoremstyle{definition}
+\newtheorem{theo}{定理}[section]
+\newtheorem{prop}{命題}[section]
+\newtheorem{defi}{定義}[section]
+\newtheorem{lemm}{補題}[section]
+\newtheorem{exam}{具体例}[section]
 %
 \geometry{left=10mm,right=10mm,top=5mm,bottom=10mm}
 %
@@ -497,9 +504,11 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \subsection{p72,73,74}
 問4:\par 
 まず，二つの補題を証明する．\\
-補題1:\par 
+\begin{lemm}
+	\label{p72:問4.1}
 	ノルムに関して, $| \| \bm x  \|- \| \bm y \| | \leq \| \bm x - \bm y \|$ が成り立つ. 
-\begin{proof} (補題1の証明)
+\end{lemm}
+\begin{proof} （補題\ref{p72:問4.1}の証明）\par 
 	絶対値の定義 ( $| a | : = \max \{ a , -a \}$ ) に立ち返ると, 
 %		
 		\[
@@ -514,9 +523,9 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		
 	より示される.
 \end{proof}
-ふたつめの補題を証明する．\\
-補題2:\par 
-	
+ふたつめの補題を証明する．
+\begin{lemm}
+	\label{p72:問4.2}
 	$\| \cdot \|_1 : \mathbb R^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{j=1} ^ n |x_j| \in \mathbb R$ とすると, 
 %		
 		\[
@@ -524,7 +533,8 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\]
 %		
 	が成り立つ. 
-\begin{proof} ( 補題2の証明 )
+\end{lemm}
+\begin{proof} (補題\ref{p72:問4.2}の証明）\par 
 	
 	$M : = n$ とおく. $\bm x \in \mathbb R^n$ とする. 各 $j ( 1 \leq j \leq n )$ において, 
 %		
