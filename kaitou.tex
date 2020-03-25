@@ -282,6 +282,28 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 %
 \setcounter{equation}{0}
 \subsection{p31}
+問1：\\
+(i)
+\begin{leftbar}
+	\begin{align*}
+		\frac{1^2+2^2+\cdots+n^2}{n^3} & = \frac{\dfrac{1}{6}n(n+1)(2n+1)}{n^3} \\
+		& =\frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right)
+	\end{align*}
+	定理2.5(2)より，
+	\[
+		\frac{1}{6} \lim_{n \to \infty} \left(1+\frac{1}{n} \right) \cdot \lim_{n \to \infty} \left(2+\frac{1}{n} \right) =\lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right)
+	\]
+	である．また，アルキメデスの原理により， 任意の$\varepsilon >0$に対して，$n_0 \in \mathbb{N}$を$n_0 >\frac{1}{\varepsilon}$となるようにとることができ，このとき，任意の$n \in \mathbb{N}$に対して，
+	\[
+		n \ge n_0 0<\frac{1}{n} \le \frac{1}{n_0} = \varepsilon
+	\]
+	となり，$\lim_{n \to \infty} \frac{1}{n} =0$である．これより，
+	\begin{align*}
+		\lim_{n \to \infty} \frac{1^2+2^2+\cdots+n^2}{n^3} & = \lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right) \\
+		& = \frac{1}{6} (1+0)(2+0) =\frac{1}{3}
+	\end{align*}
+\end{leftbar}
+\newpage
 \noindent
 問2：
 \\
@@ -336,12 +358,9 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		となり，\eqref{p32 問2 5}，\eqref{p32 問2 7}より，$\lim_{n \to \infty} a_n =e$を得る．
 	\end{proof}
 \end{leftbar}
-
+\newpage
 \subsection{p49}
-
-\subsection{p47 級数}
-
-(1)
+問1：
 \begin{leftbar}
 	\begin{proof}
 		$\lim_{n \to \infty} \sqrt[n]{a_n} =r$であるから，$0<r<1$のとき，$r<k<1$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
