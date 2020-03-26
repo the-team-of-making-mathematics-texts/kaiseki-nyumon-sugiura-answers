@@ -351,6 +351,28 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
         となる．
 	\end{leftbar}
 	\newpage
+	(iii)
+\begin{leftbar}
+    明らかに$\sqrt[n]{n} >1$なので，$\delta_n >0$を用いて，
+    \[
+        \sqrt[n]{n} = 1+ \delta_n
+    \]
+    とかける．両辺を$n$乗して，$n \to \infty$の極限を考えることを考慮すると，
+    \begin{align*}
+        n = (1+\delta_n)^n &=1 + n \delta_n + \frac{1}{2}n(n-1) {\delta_n}^2 + \cdots + (\delta_n)^n \\
+        & > \frac{1}{2}n(n-1) {\delta_n}^2
+    \end{align*}
+    となり，この不等式から，
+    \[
+        (0<) ~\delta_n < \sqrt{\frac{2}{n-1}}
+    \]
+    を得る．ここで，はさみうちの原理により，$\lim_{n \to \infty} \delta_n =0$であるから，
+    \[
+        \lim_{n \to \infty} \sqrt[n]{n} =1
+    \]
+    である．
+\end{leftbar}
+\newpage
 \noindent
 問2：
 \\
