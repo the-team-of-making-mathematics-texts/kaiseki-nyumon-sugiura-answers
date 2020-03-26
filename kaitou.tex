@@ -311,6 +311,46 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 	\end{align*}
 \end{leftbar}
 \newpage
+(ii)
+\begin{lemm}
+    \label{p31:問1.2}
+    正数列$(a_n)_{n \in \mathbb{N}}$に対して，$\left(\frac{a_{n+1}}{a_n} \right)_{n \in \mathbb{N}}$が収束し，
+    \[
+    \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1
+    \]
+    となるとき，$\lim_{n \to \infty} a_n =0$である．
+\end{lemm}
+%
+\begin{proof}(補題\ref{p31:問1.2}の証明)\par 
+   $ \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1$であるから，$r~(0<r<1)$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+   \[
+       n \ge N_1 \Longrightarrow \frac{a_{n+1}}{a_n}<r
+   \]
+   が成り立つ．このとき，
+   \[
+       a_n = a_{N_1} \cdot \frac{a_{N_1+1}}{a_{N_1}} \cdot \frac{a_{N_1 +2}}{a_{N_1 +1}} \cdots \frac{a_{n-1}}{a_{n-2}} \frac{a_n}{a_{n-1}}< a_{N_1} r^{n-N_1}=\frac{a_{N_1}}{r^{N_1}} r^n
+   \]
+   となる．$0<r<1$より$\lim_{n \to \infty} \frac{a_{N_1}}{r^{N_1}} r^n =0$であるから，$\lim_{n \to \infty} a_n =0$である．
+\end{proof}
+%
+\begin{leftbar}
+        $a_n = \frac{n^2}{a^n}$とおく．$0<a<1$のときは明らかに$\lim_{n \to \infty} a_n=\infty$となる．\par 
+        $a>1$のとき，$\frac{a_{n+1}}{a_n} =\frac{1+\dfrac{1}{n}}{a}$となり，
+        \[
+            \lim_{n \to \infty} \frac{1+\dfrac{1}{n}}{a} = \frac{1}{a} <1
+        \]
+        であるから，補題\ref{p31:問1.2}により，$\lim_{n \to \infty} a_n =0$となる．以上の議論により，
+        \begin{align*}
+            \lim_{n \to \infty} \frac{n^2}{a^n}
+            =
+            \begin{cases}
+                \infty & (0<a<1) \\
+                0 & (a>1)
+            \end{cases}
+        \end{align*}
+        となる．
+	\end{leftbar}
+	\newpage
 \noindent
 問2：
 \\
