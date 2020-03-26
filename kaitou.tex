@@ -451,7 +451,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 	\end{proof}
 \end{leftbar}
 \newpage
-\subsection{p49}
+\subsection{p49～50}
 問1：
 \begin{leftbar}
 	\begin{proof}
@@ -584,7 +584,57 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		が成り立つ．ここで，$\sum |a_n|$が収束し，各項は正なので， 定理5.5(比較判定法)により，$\sum |{a_n}^2|$も収束する．ゆえに$\sum {a_n}^2$は絶対収束する．
 	\end{proof}
 \end{leftbar}
-
+\newpage
+(6)
+\begin{lemm}(ライプニッツの定理) \par 
+    \label{ライプニッツの定理}
+    単調減少な正数列$(a_n)_{n \in \mathbb{N}}$について，$\lim_{n \to \infty} a_n =0$ならば，
+    \[
+        \sum_{n=0}^{\infty} (-1)^n a_n 
+    \]
+    は収束する．
+\end{lemm}
+\begin{proof}
+    第$n$部分和を$s_n$とおく．つまり$s_n = \sum_{k=0}^{n} (-1)^k a_k$である．このとき，
+    \[
+        S_{2n-1} = (a_0 -a_1) + (a_2-a_3)+ \cdots +(a_{2n-2}-a_{2n-1})
+    \]
+    であり，$ a_{2k}-a_{2k-1} \le 0$であるから，数列$(s_{2n-1})_{n \in \mathbb{N}}$は単調増加である．また，
+    \[
+        S_{2n-1} = a_0 -(a_1- a_2)-(a_3-a_4)- \cdots -(a_{2n-3}-a_{2n-2})-a_{2n-1} \le a_{0}
+    \]
+    であるから，$(s_{2n-1})_{n \in \mathbb{N}}$は上に有界である．よって，$(s_{2n-1})_{n \in \mathbb{N}}$は収束する．ここで，
+    \[
+        \lim_{n \to \infty} s_{2n-1} =S
+    \]
+    とすると，
+    \[
+        \lim_{n \to \infty} s_{2n} =\lim_{n \to \infty} (s_{2n-1}+a_{2n})=S+0=S
+    \]
+    であるから，$(s_{2n})_{n \in \mathbb{N}}$も$S$に収束する．以上の議論により，$(s_n)_{n \in \mathbb{N}}$は収束する．
+\end{proof}
+\begin{leftbar}
+    補題\ref{ライプニッツの定理}と，$\lim_{n \to \infty} \frac{1}{2n+1} =0$により，$\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}$は収束する．ここで，
+    \[
+         1-x^2+x^4-\cdots+(-1)^n x^{2n} =\frac{1}{1+x^2} +\frac{(-1)^n x^{2n+2}}{x^2+1}
+    \]
+の両辺を0から1まで$x$で積分すると，
+\begin{align*}
+   \overbrace{1-\frac{1}{3}+\frac{1}{5}-\cdots+\frac{(-1)^n}{2n+1}}^{s_n} &=\int_{0}^{1} \frac{1}{1+x^2} \, dx +\int_{0}^{1}\frac{(-1)^n x^{2n+2}}{x^2+1}  \, dx \\
+& = \frac{\pi}{4} + R_n
+\end{align*}
+である．ただしここで$R_n =\int_{0}^{1}\frac{(-1)^n x^{2n+2}}{x^2+1} \, dx$とおいた．この式から，
+\begin{align*}
+   \left |s_n -\frac{\pi}{4} \right | & = \left|\int_{0}^{1}\frac{(-1)^n x^{2n+2}}{x^2+1} \, dx \right| \\
+   & < \int_{0}^{1} x^{2n} \, dx \\
+   & =\frac{1}{2n+1} \to 0 ~(n \to \infty)
+\end{align*}
+である．よって，
+\[
+    \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1} =\frac{\pi}{4}
+\]
+である．
+\end{leftbar}
 \newpage
 \subsection{p72,73,74}
 問4:\par 
