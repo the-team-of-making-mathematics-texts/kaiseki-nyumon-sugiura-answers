@@ -424,8 +424,8 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \begin{proof}
     $c>1$より，$\delta >0$を用いて$c=1+\delta$とおける．このとき，
     \begin{align*}
-        c^n &= (1+\delta)^n
-        & = 1+n \delta +\frac{1}{2}n (n-1) \delta^2 + \cdots +\delta^n
+        c^n &= (1+\delta)^n \\
+        & = 1+n \delta +\frac{1}{2}n (n-1) \delta^2 + \cdots +\delta^n \\
         & > 1+n \delta
     \end{align*}
     このことから，$0<\frac{1}{c^n} <\frac{1}{1+n\delta}$であるから，はさみうちの原理により，
@@ -439,7 +439,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
     $a_n = (c^n +c^{-n})^{-1}$とおく．$c=1$のときは明らかに$\lim_{n \to \infty} a_n =\frac{1}{2}$である．\par 
     $c>1$のとき，補題\ref{p31:問1.6.1}，補題\ref{p31:問1.6.2}により，
     \[
-        \lim_{n \to \infty} c^n + c^{-n} = \infty
+        \lim_{n \to \infty} (c^n + c^{-n}) = \infty
     \]
     であるから，補題\ref{p31:問1.6.1}により$\lim_{n \to \infty} a_n = \lim_{n \to \infty} (c^n +c^{-n})^{-1} =0$である．\par 
     $0<c<1$のときは$c$の逆数を考えることにより同じ結論に帰着する．以上の議論により，
