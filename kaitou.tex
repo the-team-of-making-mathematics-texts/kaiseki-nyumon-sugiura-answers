@@ -157,8 +157,8 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \[
 	\lim_{n \to \infty} \left( \lim_{m \to \infty} (\cos (n! \pi x)) ^{2m} \right)=
 	\begin{cases}
-		1 \quad (x \in \mathbb{Q}) \\
-		0  \quad (x \in \mathbb{R} \backslash \mathbb{Q})
+		1 &(x \in \mathbb{Q}) \\
+		0 & (x \in \mathbb{R} \setminus \mathbb{Q})
 	\end{cases}
 \]
 %
@@ -468,24 +468,24 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\begin{equation}
 			\frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \cdots \left (1-\frac{r-1}{n} \right) < \frac{1}{r!} \cdot  \left(1 - \frac{1}{n+1} \right) \cdots \left (1-\frac{r-1}{n+1} \right)
 		\end{equation}
-		が成立する．これと，$a_{n+1}$の展開式のほうが，正の項を一つ多く含むことから，
+		が成立する．これと，$a_{n+1}$の展開式のほうが，正の項を一つ多く含むことから，任意の$n \in \mathbb{N}$に対して，
 		\begin{equation}
-			a_{n} < a_{n+1} \quad (\forall n \ge 1)
+			a_{n} < a_{n+1}
 		\end{equation}
-		が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加．また，\eqref{p32 問2 1}より，
+		が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加数列である．また，\eqref{p32 問2 1}より，
 		\begin{eqnarray}
 			\label{p32 問2 2}
-			a_n &<& 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{n!} \\
-			& < & 1 + \frac{1}{1!} + \frac{1}{2^2} + \cdots + \frac{1}{2^n} \\
-			& < & 2 + \frac{1}{2} \left( \frac{ 1 - 2^{1-n} }{ 1- \frac{1}{2} } \right)\\
-			& = & 2+ \frac{2^{1-n} -1}{2} \\
+			a_n &<& 1 + \frac{1}{1!} + \frac{1}{2!} +\frac{1}{3!} + \cdots + \frac{1}{n!} \\
+			& < & 1 + \frac{1}{1!} + \frac{1}{2}+ \frac{1}{2^2} + \cdots + \frac{1}{2^n} \\
+			& < & 2 + \frac{1}{2} \left( \frac{ 1 - 2^{-n} }{ 1- \frac{1}{2} } \right)\\
+			& = & 3-2^{-n} \\
 			\label{p32 問2 3}
 			& < & 3
 		\end{eqnarray}
-		であるから，$a_n < 3$であり，また，
+		であるから，$a_n < 3$であり，また，$(a_n)_{n \in \mathbb{N}}$が単調増加数列であることから，
 		\begin{equation}
 			\label{p32 問2 4}
-			a_n > 1 + \frac{1}{1!} =2
+			a_n > a_1 = \left(1+\frac{1}{1}\right)^1 =2
 		\end{equation}
 		であるから，\eqref{p32 問2 3}，\eqref{p32 問2 4}より，$2<e<3$\\
 		また，\eqref{p32 問2 2}より，
@@ -872,7 +872,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 			\forall n , m > N _1 \text {に対して, } \| f_n - f_m \| < \varepsilon / 2
 		\]
 %		
-	を満たす. $N : = N_1$ とおく. $n > N$ , $t ¥in K$ とする. 列 $( f_n ( t ) )$ は $f (t)$ に収束するから, ある自然数 $N_2$ が存在して, 
+	を満たす. $N : = N_1$ とおく. $n > N$ , $t \in K$ とする. 列 $( f_n ( t ) )$ は $f (t)$ に収束するから, ある自然数 $N_2$ が存在して, 
 %		
 		\[
 			\forall m > N_2 \text {に対して, }| | f_{m} ( t ) - f ( t ) | < \varepsilon / 2
