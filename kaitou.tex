@@ -279,7 +279,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 			0+1 \in H
 		\end{equation}
 		である．\\
-		また，$k \ge 1$となる$k \in \mathbb{N}$に対しては，$k +1 \ge 1$であり，$k+1 \in \{n \in \mathbb{N} mid n \ge 1 \} $となるため，$k+1 \in H$\\
+		また，$k \ge 1$となる$k \in \mathbb{N}$に対しては，$k +1 \ge 1$であり，$k+1 \in \{n \in \mathbb{N} \mid n \ge 1 \} $となるため，$k+1 \in H$\\
 		よって$H$は継承的である．したがって，$\mathbb{N} \subset H$\\
 		$H$の定め方より，$a \notin H$なので，$a \notin \mathbb{N}$となり，$0<a<1$となる自然数$a$は存在しない．
 	\end{proof}
@@ -643,14 +643,14 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \end{leftbar}
 \newpage
 (6)
-\begin{lemm}(ライプニッツの定理) \par 
+\begin{theo}(ライプニッツの定理\footnote{この問題を解くにあたっては必要ない定理だが，背景知識として付した．}) \par 
     \label{ライプニッツの定理}
     単調減少な正数列$(a_n)_{n \in \mathbb{N}}$について，$\lim_{n \to \infty} a_n =0$ならば，
     \[
         \sum_{n=0}^{\infty} (-1)^n a_n 
     \]
     は収束する．
-\end{lemm}
+\end{theo}
 \begin{proof}
     第$n$部分和を$s_n$とおく．つまり$s_n = \sum_{k=0}^{n} (-1)^k a_k$である．このとき，
     \[
