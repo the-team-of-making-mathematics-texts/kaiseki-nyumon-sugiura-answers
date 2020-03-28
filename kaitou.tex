@@ -188,16 +188,16 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\]
 		がいえる．このとき，$n \ge n_1$をみたす$（b_n)_{n \in \mathbb{N}}$の項を$\varepsilon$でおきかえると，
 		\[
-			\left| \frac{b_1 + b_2 + \cdots +b_n}{n} \right| < \frac{|b_1|+ \cdots + |b_{n_1}|}{n} +\varepsilon
+			\left| \frac{b_1 + b_2 + \cdots +b_n}{n} \right| < \frac{|b_1|+ \cdots + |b_{n_1-1}|}{n} +\frac{(n-n_1 +1)}{n} \varepsilon
 		\]
 		という不等式を得る．\par
-		そこで，$n_2 \in \mathbb{N}$をとると，$n \ge n_2$のとき，
+		そこで，$n_2 \in \mathbb{N}$をとると，$n \ge n_2$のとき，任意の$n \in \mathbb{N}$に対して，
 		\[
-			\frac{|b_1|+ \cdots + |b_{n_1}|}{n} <\varepsilon
+			\frac{|b_1|+ \cdots + |b_{n_1-1}|}{n} <\varepsilon
 		\]
 		であるとすると，$n \ge \max \{ n_1,n_2\}$のとき，
 		\[
-			\frac{|b_1|+ \cdots + |b_{n_1}|}{n} < \varepsilon
+			\frac{|b_1|+ \cdots + |b_{n_1-1}|}{n} < \varepsilon
 		\]
 		となる．
 		ゆえに，このとき，
@@ -279,7 +279,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 			0+1 \in H
 		\end{equation}
 		である．\\
-		また，$k \ge 1$となる$k \in \mathbb{N}$に対しては，$k +1 \ge 1$であり，$k+1 \in \{~n \in \mathbb{N}~|~n \ge 1 \} $となるため，$k+1 \in H$\\
+		また，$k \ge 1$となる$k \in \mathbb{N}$に対しては，$k +1 \ge 1$であり，$k+1 \in \{n \in \mathbb{N} mid n \ge 1 \} $となるため，$k+1 \in H$\\
 		よって$H$は継承的である．したがって，$\mathbb{N} \subset H$\\
 		$H$の定め方より，$a \notin H$なので，$a \notin \mathbb{N}$となり，$0<a<1$となる自然数$a$は存在しない．
 	\end{proof}
@@ -296,9 +296,9 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\frac{1^2+2^2+\cdots+n^2}{n^3} & = \frac{\dfrac{1}{6}n(n+1)(2n+1)}{n^3} \\
 		& =\frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right)
 	\end{align*}
-	定理2.5(2)より，
+	$a_n = \frac{1}{6} \left(1+\frac{1}{n} \right )$，$b_n = \left(2+\frac{1}{n} \right)$とおくと，$(a_n)_{n \in \mathbb{N}}$，$(b_n)_{n \in \mathbb{N}}$は明らかに収束するから，定理2.5(2)より，
 	\[
-		\frac{1}{6} \lim_{n \to \infty} \left(1+\frac{1}{n} \right) \cdot \lim_{n \to \infty} \left(2+\frac{1}{n} \right) =\lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right)
+		\lim_{n \to \infty} a_n b_n = \lim_{n \to \infty} a_n \cdot  \lim_{n \to \infty} b_n 
 	\]
 	である．また，アルキメデスの原理により， 任意の$\varepsilon >0$に対して，$n_0 \in \mathbb{N}$を$n_0 >\frac{1}{\varepsilon}$となるようにとることができ，このとき，任意の$n \in \mathbb{N}$に対して，
 	\[
@@ -307,7 +307,8 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 	となり，$\lim_{n \to \infty} \frac{1}{n} =0$である．これより，
 	\begin{align*}
 		\lim_{n \to \infty} \frac{1^2+2^2+\cdots+n^2}{n^3} & = \lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right) \\
-		& = \frac{1}{6} (1+0)(2+0) =\frac{1}{3}
+		& = \left \{\lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \right \} \cdot \left \{\lim_{n \to \infty} \left(2+\frac{1}{n} \right ) \right \} \\
+		& = \frac{1}{6} (1+0) \cdot (2+0) =\frac{1}{3}
 	\end{align*}
 \end{leftbar}
 \newpage
@@ -335,9 +336,9 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 %
 \begin{leftbar}
         $a_n = \frac{n^2}{a^n}$とおく．$0<a<1$のときは明らかに$\lim_{n \to \infty} a_n=\infty$となる．\par 
-        $a>1$のとき，$\frac{a_{n+1}}{a_n} =\frac{1+\dfrac{1}{n}}{a}$となり，
+        $a>1$のとき，$\frac{a_{n+1}}{a_n} =\frac{\left(1+\dfrac{1}{n}\right)^2}{a}$となり，
         \[
-            \lim_{n \to \infty} \frac{1+\dfrac{1}{n}}{a} = \frac{1}{a} <1
+            \lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^2}{a} = \frac{1}{a} <1
         \]
         であるから，補題\ref{p31:問1.2}により，$\lim_{n \to \infty} a_n =0$となる．以上の議論により，
         \begin{align*}
@@ -422,7 +423,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \end{lemm}
 
 \begin{proof}
-    $c>1$より，$\delta >0$を用いて$c=1+\delta$とおける．このとき，
+    $c>1$より，$\delta >0$を用いて$c=1+\delta$とおける．このとき，のちに$n \to \infty$の極限を考えることを考慮すると，
     \begin{align*}
         c^n &= (1+\delta)^n \\
         & = 1+n \delta +\frac{1}{2}n (n-1) \delta^2 + \cdots +\delta^n \\
@@ -477,7 +478,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 			\label{p32 問2 2}
 			a_n &<& 1 + \frac{1}{1!} + \frac{1}{2!} +\frac{1}{3!} + \cdots + \frac{1}{n!} \\
 			& < & 1 + \frac{1}{1!} + \frac{1}{2}+ \frac{1}{2^2} + \cdots + \frac{1}{2^n} \\
-			& < & 2 + \frac{1}{2} \left( \frac{ 1 - 2^{-n} }{ 1- \frac{1}{2} } \right)\\
+			& < & 2 + \frac{1}{2} \left( \frac{ 1 - 2^{-n} }{ 1- \dfrac{1}{2} } \right)\\
 			& = & 3-2^{-n} \\
 			\label{p32 問2 3}
 			& < & 3
