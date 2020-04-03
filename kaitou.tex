@@ -177,7 +177,6 @@ i)
 \end{leftbar}
 \newpage
 (iii)
-
 \begin{leftbar}
     $\frac{n}{2}$以下の最大の自然数を$m$とおく．与えられた式は，
     \[
@@ -194,6 +193,46 @@ i)
     である．$n \to \infty$のとき$m \to \infty$なので，はさみうちの原理により，
     \[
         \lim_{n \to \infty}\frac{n!}{n^n} =0
+    \]
+    である．
+\end{leftbar}
+\newpage
+（iv)
+\begin{leftbar}
+    のちに$n \to \infty$の極限を考えることを考慮すると，
+    \begin{align*}
+        2^n &= (1+1)^n \\
+        =& 1+n +\frac{1}{2} n(n-1)+ \cdots +n+1 \\
+        & > \frac{1}{2} n(n-1)
+    \end{align*}
+    となり，この不等式から，
+    \[
+        0< \frac{n}{2^n} < \frac{2}{n-1}
+    \]
+    を得る．ここで，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty} \frac{n}{2^n}=0
+    \]
+    である．
+\end{leftbar}
+\newpage
+(v)
+\begin{leftbar}
+    まず，
+    \[
+       (0<) ~\sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}}
+    \]
+    である．ここで，のちに$n \to \infty$の極限を考えることを考慮すると，
+    \[
+    \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}} \le \frac{1}{n}
+    \]
+    であり，
+    \[
+        0< \sqrt{n+1} - \sqrt{n} <\frac{1}{n}
+    \]
+    を得る．ここで，はさみうちの原理を用いると，
+    \[
+        \lim_{n \to \infty} (\sqrt{n+1} - \sqrt{n} )=0
     \]
     である．
 \end{leftbar}
