@@ -128,8 +128,54 @@ $(-a)b = -ab$も同様にして示される．
 \end{itembox}
 %
 \newpage
-\subsection{p16,17}
+\subsection{p16〜17}
 %
+問1：\\
+i)
+%
+\begin{leftbar}
+    $a=0$のときは明らかに$0$に収束するので，$a \ne 0$とする．$2|a| \le N$となる$N \in \mathbb{N}$をとる．このとき，
+    \begin{align*}
+         0 &< \left | \frac{a^n}{n!} \right | \\
+         &\le \frac{|a|^n}{n!} \\
+         &= \frac{|a|^{N}}{N!} \cdot \frac{|a|}{N+1} \cdot \frac{|a|}{N+1} \cdots \frac{|a|}{n} \\
+         & \le  \frac{|a|^{N}}{N!} \left(\frac{1}{2} \right)^{n-N}
+    \end{align*}
+    であるから，
+    \[
+        - \frac{|a|^{N}}{N!} \left(\frac{1}{2} \right)^{n-N} < \frac{a^n}{n!} < \frac{|a|^{N}}{N!} \left(\frac{1}{2} \right)^{n-N}
+    \]
+    となり，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty} \frac{a^n}{n!} =0
+    \]
+    である
+\end{leftbar}
+
+\newpage
+(ii)
+\begin{leftbar}
+    $a=1$のときは明らかに$1$に収束するので，まず$a>1$のときを考える．$\delta_n >0$を用いて，
+    \[
+        \sqrt[n]{a} =1+\delta_n
+    \]
+    とおくことができる．両辺を$n$乗すると
+    \begin{align*}
+        a& = 1+ n \delta_n + \frac{1}{2}n(n-1) {\delta_n}^2 + \cdots + {\delta_n}^2 \\
+        &>1+n \delta_n \\
+        & >n \delta_n
+    \end{align*}
+    となり，$0<\delta_n <\frac{a}{n}$であるから，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty} \delta_n =0
+    \]
+    となる．$a<1$のときは，$a^{\frac{1}{n}}=\left(\left(\frac{1}{a}\right)^{\frac{1}{n}}\right)^{-1}$を使えば同じ結果が得られ，以上の議論により，
+    \[
+        \lim_{n \to \infty} \sqrt[n]{a} =1
+    \]
+    となる．
+\end{leftbar}
+\newpage
 \noindent
 問2：
 \\
