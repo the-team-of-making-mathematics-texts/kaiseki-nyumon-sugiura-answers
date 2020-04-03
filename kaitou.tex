@@ -176,6 +176,28 @@ i)
     となる．
 \end{leftbar}
 \newpage
+(iii)
+
+\begin{leftbar}
+    $\frac{n}{2}$以下の最大の自然数を$m$とおく．与えられた式は，
+    \[
+       \left( 0  < \right) \frac{n!}{n^n}  = \frac{1 \cdot 2 \cdots m \cdot (m+1) \cdots n}{n^n}
+    \]
+    と表されるので，$\frac{(m+1) \cdot (m+2) \cdot n}{n^{n-m}} <1$であることと，$m \le \frac{n}{2}$から$\frac{m}{n} \le \frac{1}{2}$であることを用いると，
+    \[
+        \frac{1 \cdot 2 \cdots m \cdot (m+1) \cdots n}{n^n} < \frac{1 \cdot 2 \cdots m}{n^m} <\left(\frac{1}{2}\right)^m
+    \]
+    よって，
+    \[
+        -\left(\frac{1}{2}\right)^m < \frac{n!}{n^n} <\left(\frac{1}{2}\right)^m
+    \]
+    である．$n \to \infty$のとき$m \to \infty$なので，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty}\frac{n!}{n^n} =0
+    \]
+    である．
+\end{leftbar}
+\newpage
 \noindent
 問2：
 \\
