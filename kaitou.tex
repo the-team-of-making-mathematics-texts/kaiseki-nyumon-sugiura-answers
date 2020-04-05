@@ -289,13 +289,12 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 %
 \begin{leftbar}
 	\begin{proof}
-		$\lim_{n \to \infty} a_n= a$は，$ \lim_{n \to \infty} (a_n - a)= 0$\\
-		と書き直せる．$b_n = a_n -a$とおくと，証明すべきことは，
+		$\lim_{n \to \infty} a_n= a$は，$ \lim_{n \to \infty} (a_n - a)= 0$と書き直せる．ここで，$b_n = a_n -a$とおくと，証明すべきことは，
 		\[
-			\lim_{n \to \infty} b_n=0，ならば \lim_{n \to \infty} \frac{b_1 + b_2 + \cdots +b_n}{n} = 0
+			\lim_{n \to \infty} b_n=0，\text{のとき} \lim_{n \to \infty} \frac{b_1 + b_2 + \cdots +b_n}{n} = 0
 		\]
-		である．\par
-		ここで，任意の$\varepsilon > 0$に対して，ある自然数$n_1 \in \mathbb{N}$が存在し，$n \ge n_1$のとき
+		である．
+		ここで，任意の$\varepsilon > 0$に対して，ある自然数$n_1 \in \mathbb{N}$が存在し，任意の$n \in \mathbb{N}$に対して，$n \ge n_1$のとき
 		\[
 			|b_n|<\varepsilon
 		\]
@@ -307,8 +306,11 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\[
 			\left| \frac{b_1 + b_2 + \cdots +b_n}{n} \right| < \frac{|b_1|+ \cdots + |b_{n_1-1}|}{n} +\frac{(n-n_1 +1)}{n} \varepsilon
 		\]
-		という不等式を得る．\par
-		そこで，$n_2 \in \mathbb{N}$をとると，$n \ge n_2$のとき，任意の$n \in \mathbb{N}$に対して，
+		という不等式を得る．また，
+		\[
+			\frac{(n-n_1 +1)}{n} \varepsilon = \left(1+\frac{1-n_1}{n}\right)\varepsilon <\varepsilon
+		\]
+		である．ここで，$n_2 \in \mathbb{N}$をとると，任意の$n \in \mathbb{N}$に対して，$n \ge n_2$のとき，
 		\[
 			\frac{|b_1|+ \cdots + |b_{n_1-1}|}{n} <\varepsilon
 		\]
@@ -321,7 +323,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		\[
 			\left| \frac{ b_1 + b_2 + \cdots +b_n}{n} \right|　< \varepsilon+\varepsilon=2\varepsilon
 		\]
-		よって示された．
+		となる．ここまでの議論で，$\lim_{n \to \infty} b_n =0$のとき$\lim_{n \to \infty} \frac{ b_1 + b_2 + \cdots +b_n}{n} =0$であることが示されて，ただちに主張が従う．
 	\end{proof}
 \end{leftbar}
 %
