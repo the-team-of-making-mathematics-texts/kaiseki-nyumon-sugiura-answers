@@ -407,7 +407,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \newpage
 %
 \setcounter{equation}{0}
-\subsection{p31}
+\subsection{p31~33}
 問1：\\
 (i)
 \begin{leftbar}
@@ -626,6 +626,62 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 		となり，\eqref{p32 問2 5}，\eqref{p32 問2 7}より，$\lim_{n \to \infty} a_n =e$を得る．
 	\end{proof}
 \end{leftbar}
+\newpage
+(6)
+\begin{leftbar}
+    \begin{proof}
+        もし起こり得るとすると，切断の定義により$ a< b$となり，ここで$ c = \frac{a+b}{2}$とすると，$a < c < b$，$c \in \mathbb{R}$であるが，$ c \notin A$，$ c \notin B$となり，$ A \cup B = \mathbb{R}$に矛盾する．\par 
+        以上の議論により，起こり得ないことが示された．
+    \end{proof}
+\end{leftbar}
+\newpage
+(7)
+\begin{leftbar}
+    \begin{proof}
+        (I) \quad まず，デーデキントの公理から連続の公理を導出する．
+        $A \ne \varnothing$を上に有界な$\mathbb{R}$の部分集合とする．いま$A$の上界全体の集合を$U(A)$としたとき，順序対$({U(A)}^c , U(A))$が$\mathbb{R}$の切断であることを示す．\par 
+        $A$は上に有界であるから，少なくとも一つ上界をもつ，よって$U(A) \ne \varnothing$である．また，$A$の任意の元$a$をとると，$a-1$は$A$の上界でないから，
+        \begin{gather*}
+            a -1 \notin U(A) \\
+            \therefore ~ a-1 \in  {U(A)}^c
+        \end{gather*}
+        これより${U(A)}^c \ne \varnothing$である．ここで，${U(A)}^c \cup U(A)= \mathbb{R}$であるから，さらに$a \in A$かつ$ b \in U(A)$とすれば，$a<b$であるから，順序対$({U(A)}^c , U(A))$は$\mathbb{R}$の切断である．\par 
+        次に$\sup A$，すなわち$ \min U(A)$が存在することを示す．$U(A)$に最小元がないとして背理法で示す．このとき，デデキントの公理により，
+        \[
+        a = \max {U(A)}^c
+        \]
+        が存在する．また，$a \notin U(A)$より，$a<c$であるような$c \in A$が存在する．ここで実数の稠密性により
+        \[
+            a<d<c
+        \]
+        をみたす$d \in \mathbb{R}$が存在するが，$a = \max A$であるから上の不等式より$d \in U(A)$である．よって，
+        \[
+            c \le d
+        \]
+        とならねばならぬが，これは$d<c$に矛盾するため，背理法の仮定が誤りであり，$ \sup A = \min U(A)$が存在する．これが証明すべきことであった．\\
+        \par 
+        (II) \quad 連続の公理からデーデキントの公理を導出する．\par 
+        $(A,B)$を切断とする．$A \ne \varnothing$は切断の定義によりわかる．ここで，もし$A$が上に有界でないとすると，任意の$ a \in \mathbb{R}$に対して，
+        \[
+            a \le l
+        \]
+        となる$l \in A$が存在し，$B \ne \varnothing$となり矛盾を生じる．よって$A$は上に有界である．ここまでの議論と連続の公理により，
+        \[
+            s = \sup A
+        \]
+        の存在がたしかめられた．
+        \begin{itemize}
+            \item $ s \in A$のとき\par 
+            $s$が$A$の最大元であることは明らか．このとき$B$に最小元がないことを示す．もし$B$に最小元$t$が存在するとすると，切断の定義により$ s < t$となる．
+            よって実数の稠密性により，$s < u < t$をみたす$ u \in \mathbb{R}$が存在する．しかし$u \notin A$かつ$u \notin B$により，これは切断の定義に矛盾する．\\
+            \item $ s \notin A$のとき\par
+            $ A \cup B = \mathbb{R}$，$ s \in \mathbb{R}$なので，$ s \in B$となる．ここで，$B$の元$b \ne s$をとる．もし$ b <s$であるとすると，任意の$ a' \in A$に対して，
+            $ a' < t <s$となり，これは$s$が$A$の上限であることに矛盾．よって，$b \in B$を任意に取ったとき，$s \le b$である．$s \in B$であることに留意すると，$s$は$B$の最小元である．
+        \end{itemize}
+        以上の議論により，デーデキントの公理の主張が証明された．\par 
+        (I)，(II)の議論により，連続の公理とデーデキントの公理は同値である．
+    \end{proof}
+    \end{leftbar}
 \newpage
 \subsection{p49～50}
 問1：
