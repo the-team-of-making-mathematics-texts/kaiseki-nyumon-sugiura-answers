@@ -1347,6 +1347,152 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 
 \newpage
 
+p239 3 (i)
+
+\begin{leftbar}
+    部分積分法を用いると，
+    \begin{align*}
+        \int x^\alpha \log x \, dx & = \frac{x^{\alpha +1} \log x}{\alpha +1}　- \int \frac{x^{\alpha +1}}{\alpha+1} \cdot \frac{1}{x} \, dx \\
+        & = \frac{x^{\alpha +1} \log x}{\alpha +1}- \frac{1}{\alpha +1} \int x^{\alpha} \, dx \\
+        & = \frac{x^{\alpha+1} \log x}{\alpha +1} - \frac{x^{\alpha +1}}{(\alpha +1)^2}+ \mathrm{Constant.}
+    \end{align*}
+    となり，これが答えである．
+\end{leftbar}
+
+p239 3 (ii)
+
+\begin{leftbar}
+    部分積分法を用いると，
+    \begin{align*}
+        \int x^n e^x \, dx & = x^n e^x - n \int x^{n-1} e^x \, dx \\
+        & = x^n e^x - n x^{n-1} e^x + (n-1)\int x^{n-2} e^x \, dx \\
+        & = \cdots = x^n e^x - n x^{n-1} e^x + \cdots + (-1)^n n! \int e^x \, dx \\
+        & = e^x (x^n -n x^{n-1}+ \cdots +(-1)^n n!) + \mathrm{Constant.}
+    \end{align*}
+    となる．
+\end{leftbar}
+
+\newpage 
+
+p239 3 (v)
+
+\begin{leftbar}
+    $\cos ^2 x = \frac{1+\cos 2x}{2}$なので，
+    \begin{align*}
+        \int \cos ^2 x \, dx & = \int \frac{1+\cos 2x}{2} \, dx \\
+        & = \frac{x}{2}+\frac{1}{4} \sin 2x + \mathrm{Constant.}
+    \end{align*}
+    である．
+\end{leftbar}
+
+p239 3 (vi)
+
+\begin{leftbar}
+    $(\log x)' = \frac{1}{x}$であることを用いて，
+    \begin{align*}
+        \int \frac{(\log x)^2}{x} \, dx & = \int (\log x)^2 (\log x)' \, dx \\
+        & = \frac{(\log x)^3}{3} + \mathrm{Constant.}
+    \end{align*}
+    となり，これが答えである．
+\end{leftbar}
+
+p239 3) (viii)
+
+\begin{leftbar}
+    $\cos ^2 x = 1- \sin ^2 x$なので，
+    \begin{align*}
+        \int \sin ^3 x \cos ^2 x \, dx & = \int \sin ^3 x (1-\sin ^2 x) \, dx = \int (\sin ^3 x - \sin ^5 x ) \, dx \\
+        & = \int (\sin ^2 x - \sin ^4 x) \sin x \, dx \\
+        & = \int \{ (1-t^2)- (1-t^2)^2 \} (-1) \, dt \quad (\cos x =t) \\
+        & = \int (t^4 -t^2) \, dt \\
+        & = \frac{\cos ^5 x}{5}-\frac{\cos ^3 x}{3}+\mathrm{Constant.}
+    \end{align*}
+    である．
+\end{leftbar}
+
+\newpage 
+
+p239 3) (x)
+%
+（微分の利用）
+\begin{leftbar}
+    まず，
+    \begin{align*}
+        (e^{ax} \cos bx)' &= -b e^{ax} \sin b x + a e^{ax} \cos bx \\
+        (e^{ax} \sin bx)' & = a e^{ax} \sin b x + b e^{ax} \cos bx
+    \end{align*}
+    なので，
+    \[
+         b \times (e^{ax} \sin bx)'-a \times (e^{ax} \cos bx)' = (a^2+b^2) e^{ax} \cos bx
+    \]
+    である．よって，$a^2 + b^2 \ne 0$より，
+    \[
+        \int e^{ax} \cos bx \, dx  = \frac{e^{ax}(b \sin bx- a \cos bx)}{a^2+b^2} + \mathrm{Constant.}
+    \]
+    を得る．
+\end{leftbar}
+
+（部分積分の繰り返し）
+\begin{leftbar}
+    $a \ne 0$とする．
+    \begin{align*}
+       \int e^{ax} \cos bx \, dx & = \frac{e^{ax} \cos bx}{a} + \int \frac{b e^{ax} \sin bx}{a} \, dx \\
+       & = \frac{e^{ax} \cos bx}{a} + \frac{b e^{ax} \sin bx}{a^2} - \int \frac{b^2 e^{ax} \cos bx}{a^2} \, dx
+    \end{align*}
+    なので，これを整理すると，
+    \begin{gather*}
+        (a^2 + b^2) \int e^{ax} \cos bx  \, dx = b e^{ax} \sin bx - a e^{ax} \cos bx \\
+        \therefore ~ \int e^{ax} \cos bx \, dx  = \frac{e^{ax}(b \sin bx- a \cos bx)}{a^2+b^2} + \mathrm{Constant.}
+    \end{gather*}
+    となる．
+
+    $a =0$の場合は，
+    \[
+        \int 1 \cdot \cos bx \, dx = \frac{1}{b} \sin bx + \mathrm{Constant.}
+    \]
+    となるため上の表式でよい．
+\end{leftbar}
+
+\newpage
+（相棒連立）
+\begin{leftbar}
+    $a \ne 0$とする．
+    \[ 
+        \int e^{ax} \cos bx \, dx   = \frac{e^{ax} \cos bx}{a} + \int \frac{b e^{ax} \sin bx}{a} \, dx 
+    \]
+    かつ，
+    \[
+        \int e^{ax} \sin bx \, dx  = \frac{e^{ax} \sin bx}{a}- \int \frac{b e^{ax} \cos bx}{a} \, dx 
+    \]
+    なので，このふたつの式から$\int e^{ax} \sin bx \, dx$を消去すると，
+    \[
+        \int e^{ax} \cos bx \, dx  = \frac{e^{ax}(b \sin bx- a \cos bx)}{a^2+b^2} + \mathrm{Constant.}
+    \]
+    を得る．$a =0$の場合は，
+    \[
+        \int 1 \cdot \cos bx \, dx = \frac{1}{b} \sin bx + \mathrm{Constant.}
+    \]
+    となるため上の表式でよい．
+\end{leftbar}
+
+\begin{leftbar}
+    まず，
+    \[
+        \int e^{ax} \cos bx \, dx = \int \Re \bigl [e^{(a+ib)x} \bigl ] \, dx = \Re \left [\frac{e^{(a+ib)x}}{a+ib} \right] + \mathrm{Constant.}
+    \]
+    である．ここで，
+    \begin{align*}
+        \frac{e^{(a+ib)x}}{a+ib} & = \frac{e^{ax} \cdot e^{ibx}}{a+ib} \\
+        & = \frac{e^{ax}(\cos bx + i \sin bx)}{a+ib}=  \frac{e^{ax}(\cos bx + i \sin bx)(a-ib)}{(a+ib)(a-ib)} \\
+        & = \frac{e^{ax}}{a^2+b^2} \bigl[ \{a \cos bx + b \sin bx \}+i\{ -b \cos bx + a \sin bx\} \bigl]
+    \end{align*}
+    となるので，これの実部を取り，
+    \[
+        \int e^{ax} \cos bx \, dx  = \frac{e^{ax}(b \sin bx- a \cos bx)}{a^2+b^2} + \mathrm{Constant.}
+    \]
+    を得る．
+\end{leftbar}
+
 \section{級数}
 
 \end{document}
