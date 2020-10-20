@@ -1372,6 +1372,18 @@ p239 3 (ii)
     となる．
 \end{leftbar}
 
+p239 3 (iii)
+\begin{leftbar}
+    部分積分法を用いると，
+    \begin{align*}
+        \int (\log x)^n \, dx & = \int (\log x)^n  (x)' \, dx \\
+        & = x (\log x)^n - n \int  \frac{(\log x)^{n-1}}{x} \cdot  x \, dx \\
+        & =  x (\log x)^n - n x(\log x)^{n-1} + (n-1) \int \frac{(\log x)^{n-2}}{x} \cdot x \, dx \\
+        & = \cdots = x (\log x)^n - n x(\log x)^{n-1} + \cdots + x(-1)^n n!
+    \end{align*}
+    となり，これが答えである．
+\end{leftbar}
+
 \newpage 
 
 p239 3 (v)
