@@ -1148,6 +1148,37 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \newpage
 \section{微分法}
 
+\subsection{p90〜91}
+
+p90 3 (i)
+\begin{leftbar}
+    \begin{proof}
+    $a,b,c \in \mathbb{R}^3$に対し，
+    \begin{align*}
+        (a \times b |c) & = a_1 b_2 c_3 +a_2 b_3 c_1 + a_3 b_1 c_2 \\
+        & \qquad - a_1 b_3 c_2 -a_2 b_2 c_3 - a_3 b_2 c_1 \\
+        & =\det (a,b,c)
+    \end{align*}
+    である．これが証明すべきことであった．
+\end{proof}
+\end{leftbar}
+
+p90 3 (viii)
+\begin{leftbar}
+    \begin{proof}
+        \begin{align*}
+            \abs{a \times b}^2 & = (a_2 b_3 -a_3 b_2)^2 + (a_3 b_1 - a_1 b_3)^2 + (a_1 b_2 - a_2 b_1)^2 \\
+            & =({a_1}^2+{a_2}^2+{a_3}^2)({b_1}^2+{b_2}^2+{b_3}^2)-(a_1 b_1 + a_2 b_2 + a_3 b_3)^2 \\
+            & = \abs{a}^2 \abs{b}^2 -(a|b)^2 \\
+            & = \abs{a}^2 \abs{b}^2 - \abs{a}^2\abs{b}^2 \cos^2 \theta \\
+            & = \abs{a}^2 \abs{b}^2 - \abs{a}^2 \abs{b}^2 (1-\sin ^2 \theta) \\
+            & = \abs{a}^2 \abs{b}^2 \sin ^2 \theta
+        \end{align*}
+        であるから，これよりただちに主張が従う．
+    \end{proof}
+\end{leftbar}
+
+\newpage
 \subsection{p106〜107}
 問1：
 \begin{lemm}
