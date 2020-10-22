@@ -23,6 +23,9 @@ setpagesize=false,
 }
 \everymath{\displaystyle}
 
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
 \theoremstyle{definition}
 \newtheorem{theo}{定理}[section]
 \newtheorem{prop}{命題}[section]
@@ -1386,6 +1389,17 @@ p239 3 (iii)
 
 \newpage 
 
+p239 3 (iv)
+\begin{leftbar}
+    部分積分法を用いると，
+    \begin{align*}
+        \int \arcsin x \, dx & = \int (x)' \arcsin x \, dx \\
+        & = x \arcsin x  - \int \frac{x}{\sqrt{1-x^2}} \, dx \\
+        & = x \arcsin x - \sqrt{1-x^2} + \mathrm{Constant.}
+    \end{align*}
+    であり，これが答えである．
+\end{leftbar}
+
 p239 3 (v)
 
 \begin{leftbar}
@@ -1408,6 +1422,8 @@ p239 3 (vi)
     となり，これが答えである．
 \end{leftbar}
 
+\newpage
+
 p239 3) (viii)
 
 \begin{leftbar}
@@ -1420,6 +1436,20 @@ p239 3) (viii)
         & = \frac{\cos ^5 x}{5}-\frac{\cos ^3 x}{3}+\mathrm{Constant.}
     \end{align*}
     である．
+\end{leftbar}
+
+p239 3 (ix)
+
+\begin{leftbar}
+    $\sqrt[6]{x}=t$とおくと，$x=t^6$であるから，$\frac{dx}{dt}=6t^5$である．これらを用いると，
+    \begin{align*}
+        \int \frac{1}{\sqrt{x}-\sqrt[3]{x}} \, dx & = \int \frac{1}{t^3-t^2} \cdot 6t^5 \, dt \\
+        & = \int \frac{6t^3}{t-1} \, dt \\
+        & = \int \frac{(t-1)(6t^2+6t+1)+6}{t-1} \, dt \\
+        & = \int \left (6t^2+6t+6 + \frac{6}{t-1}\right) \, dt \\
+        & = 2\sqrt{x}+3 \sqrt[3]{x} + 6 \sqrt[6]{x} + 6 \log \abs{\sqrt[6]{x}-1}+ \mathrm{Constant.}
+    \end{align*}
+    である
 \end{leftbar}
 
 \newpage 
