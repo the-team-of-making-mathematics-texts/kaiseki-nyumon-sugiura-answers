@@ -1596,6 +1596,31 @@ p247 3) (i)
     であり，これが答えである．
 \end{leftbar}
 
+p247 3) (ii)
+\begin{leftbar}
+    $(x-1)(x-2)(x-3)=x^3 -6x^2+11x-6$であるから，
+    \[
+        \int \frac{x^3}{(x-1)(x-2)(x-3)} \, dx  = \int \left (1+ \frac{6x^2-11x+6}{(x-1)(x-2)(x-3)}\right) \, dx
+    \]
+    である．ここで，$A$，$B$，$C$を定数として，
+    \[
+        \frac{6x^2-11x+6}{(x-1)(x-2)(x-3)} = \frac{A}{(x-1)}+\frac{B}{(x-2)}+\frac{C}{(x-3)}
+    \]
+    とおく．これより，
+    \begin{gather*}
+        6x^2-11x+6 = A(x-2)(x-3)+B (x-1)(x-2)+C(x-1)(x-2) \\
+        \therefore ~ A = \frac{1}{2}, \quad B = -\frac{1}{8},\quad C= \frac{27}{2}
+    \end{gather*}
+    となる．これより，
+    \begin{align*}
+        \int \frac{x^3}{(x-1)(x-2)(x-3)} \, dx & = \int \int \left \{ 1+ \frac{1}{2(x-1)} - \frac{1}{8(x-2)}+\frac{27}{2(x-3)} \right \} \\
+        & = x + \frac{1}{2} \log \abs*{\frac{(x-1)(x-3)^{27}}{(x-2)^{16}}}+\mathrm{Constant.}
+    \end{align*}
+    である．
+\end{leftbar}
+
+\newpage 
+
 \section{級数}
 
 \end{document}
