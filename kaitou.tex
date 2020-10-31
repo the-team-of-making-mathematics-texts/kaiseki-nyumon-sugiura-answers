@@ -872,7 +872,56 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 である．
 \end{leftbar}
 \newpage
-\subsection{p63}
+\subsection{p63～64}
+
+2) (i)
+\begin{leftbar}
+    $\abs*{\sin \frac{1}{x}} \le 1$，$\abs*{\sin \frac{1}{y}} \le 1$であるから，
+    \[
+        \abs*{(x+y) \sin \frac{1}{x} \sin \frac{1}{y}} \le \abs{(x+y)} \le \abs{x}+\abs{y} \to 0 \quad  \Bigl( (x,y) \to 0 \Bigl)
+    \]
+    である．よって，
+    \[
+        \lim_{(x,y)\to 0} (x+y) \sin \frac{1}{x} \sin \frac{1}{y} =0
+    \]
+    となる．
+\end{leftbar}
+
+2) (iii)
+\begin{leftbar}
+    まず，$\log x^x = x \log x$である．また，
+    \[
+        \lim_{x \to +0} x \log x  =\lim_{x \to +0} \frac{\log x}{1/x} 
+    \]
+    となる．ここで，$\lim_{x \to +0} \log x = -\infty$，$\lim_{x \to +0} 1/x =\infty$であるから，ロピタルの定理が適用でき，
+    \begin{align*}
+        \lim_{x \to +0} \frac{\log x}{1/x} & = \lim_{x \to +0} \frac{1/x}{-1/x^2} \\
+        & = \lim_{x \to +0} (-x) \\
+        & =0
+    \end{align*}
+    である．よって，
+    \begin{align*}
+    \lim_{x \to +0} x^x &= \lim_{x \to +0} e^{\log x^x} \\
+    & =e^0 =1
+    \end{align*}
+    となり，これが答えである．
+\end{leftbar}
+
+\newpage 
+2) (iv)
+\begin{leftbar}
+    $x=r \cos \theta$，$y=r\sin \theta$とおくと，
+    \begin{align*}
+        \lim_{(x,y)\to 0} \frac{1-\cos (x^2+y^2)}{x^2+y^2} & = \lim_{r \to 0} \frac{1-\cos (r^2)}{r^2} \\
+        & =\lim_{r \to 0} \frac{1-(-2\sin ^2 (r^2/2)+1)}{r^2} \\
+        & =\lim_{r \to 0} \frac{\sin ^2 (r^2/2)}{(r^2/2)^2} \cdot (r^2/2) \\
+        & = 1^2 \cdot 0 =0
+    \end{align*}
+    を得て，これが答えである．
+\end{leftbar}
+
+\newpage
+
 問3(i)
 \begin{leftbar}
     以下，$\mathbb{Q}$の閉包は$\mathbb{R}$あることを示す．\par 
