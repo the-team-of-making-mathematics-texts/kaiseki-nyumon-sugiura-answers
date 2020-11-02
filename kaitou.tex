@@ -301,19 +301,19 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
     \]
     と変形する．この右辺から，
     \[
-        \abs*{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \le \frac{\abs{(a_1-a)}+\abs{(a_2-a)}+\cdots+\abs{(a_n-a)}}{n}
+        \abs*{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \le \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}
     \]
     を得る．これにより，
     \[
-        n \ge n_1 \Longrightarrow \frac{\abs{(a_1-a)}+\abs{(a_2-a)}+\cdots+\abs{(a_{n_1-1}-a)}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon 
+        n \ge n_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon 
     \]
     となる．ここで$n_2 \coloneqq n_1 +1$とすると，$n \ge n_2$であるとき$\left( \frac{n-n_1+1}{n} \right ) < \varepsilon$となることに注意する．さて，
     \[
-        n \ge n_3 \Longrightarrow \frac{\abs{(a_1-a)}+\abs{(a_2-a)}+\cdots+\abs{(a_{n_1-1}-a)}}{n}<\varepsilon
+        n \ge n_3 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n}<\varepsilon
     \]
     となるように$n_3 \in \mathbb{N}$をとる．$N \coloneqq \max \{n_2 , n_3\}$とすると，
     \[
-        n \ge N \Longrightarrow \frac{\abs{(a_1-a)}+\abs{(a_2-a)}+\cdots+\abs{(a_{n_1-1}-a)}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon < \varepsilon + \varepsilon = 2 \varepsilon
+        n \ge N \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon < \varepsilon + \varepsilon = 2 \varepsilon
     \]
     であり，これより
     \[
@@ -886,7 +886,7 @@ p63 1) (ii)
     \label{lem:三角関数の不等式}
     $0 < x < \pi /2$のとき，
     \[
-        \sin x < x (< \tan x )
+        \sin x < x ~(< \tan x )
     \]
     が成り立つ．
 \end{lemm}
