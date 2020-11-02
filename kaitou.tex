@@ -869,7 +869,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \end{leftbar}
 \newpage
 \subsection{p63～64}
-1) (i)
+p63 1) (i)
 \begin{leftbar}
     $a \ne 0$の場合をまず考える．$\delta \le \frac{\abs{a}}{2}$とすると，$\abs{x-a}<\delta$より
     \[
@@ -879,7 +879,25 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
     \[
         \abs*{\frac{1}{x}-\frac{1}{a}}=\frac{\abs{a-x}}{\abs{ax}} <\frac{2 \delta}{\abs{a}^2}
     \]
-    であるから，$a=0$の場合も含めて，$\delta \coloneqq \min \{ \abs{a}/2,\abs{a}^2\varepsilon/2 \}$でよい．
+    であるから，$a=0$の場合も含めて，$\delta = \min \{ \abs{a}/2,\abs{a}^2\varepsilon/2 \}$でよい．
+\end{leftbar}
+p63 1) (ii)
+\begin{lemm}
+    \label{lem:三角関数の不等式}
+    $0 < x < \pi /2$のとき，
+    \[
+        \sin x < x (< \tan x )
+    \]
+    が成り立つ．
+\end{lemm}
+
+\begin{leftbar}
+    $\sin x - \sin a = 2 \cos \left( \frac{x+a}{2} \right )\sin \left ( \frac{x-a}{2} \right)$であることを用いると，
+    \begin{align*}
+        \abs{\sin x - \sin a}&= \abs*{2 \cos \left( \frac{x+a}{2} \right )\sin \left ( \frac{x-a}{2} \right)} \\
+        & \le  \abs*{\cos \frac{x+a}{2}} \abs{x-a} \le \abs{x-a}
+    \end{align*}
+    となる．ここで\hyperref[lem:三角関数の不等式]{補題の不等式}を用いた．これから，答えは$\delta = \varepsilon$でよい．
 \end{leftbar}
 
 \newpage 
