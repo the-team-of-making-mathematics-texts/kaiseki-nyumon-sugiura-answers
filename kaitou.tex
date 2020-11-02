@@ -285,50 +285,46 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 %
 \newpage
 %
-\noindent
-問3：
-\\
-\textsl{Hint}：$a=0$のときを考えればよいので，そのように式変形をしてみる．そのあとは$\varepsilon$を用いて，評価していく．\\
-\dotfill
-%
+3)
 \begin{leftbar}
-	\begin{proof}
-		$\lim_{n \to \infty} a_n= a$は，$ \lim_{n \to \infty} (a_n - a)= 0$と書き直せる．ここで，$b_n = a_n -a$とおくと，証明すべきことは，
-		\[
-			\lim_{n \to \infty} b_n=0，\text{のとき} \lim_{n \to \infty} \frac{b_1 + b_2 + \cdots +b_n}{n} = 0
-		\]
-		である．
-		ここで，任意の$\varepsilon > 0$に対して，ある自然数$n_1 \in \mathbb{N}$が存在し，任意の$n \in \mathbb{N}$に対して，$n \ge n_1$のとき
-		\[
-			|b_n|<\varepsilon
-		\]
-		であり，また，絶対値の性質により，
-		\[
-			\left| \frac{b_1 + b_2 + \cdots +b_n}{n} \right| <\frac{|b_1| + |b_2| + \cdots +|b_n|}{n}
-		\]
-		がいえる．このとき，$n \ge n_1$をみたす$（b_n)_{n \in \mathbb{N}}$の項を$\varepsilon$でおきかえると，
-		\[
-			\left| \frac{b_1 + b_2 + \cdots +b_n}{n} \right| < \frac{|b_1|+ \cdots + |b_{n_1-1}|}{n} +\frac{(n-n_1 +1)}{n} \varepsilon
-		\]
-		という不等式を得る．また，
-		\[
-			\frac{(n-n_1 +1)}{n} \varepsilon = \left(1+\frac{1-n_1}{n}\right)\varepsilon <\varepsilon
-		\]
-		である．ここで，$n_2 \in \mathbb{N}$をとると，任意の$n \in \mathbb{N}$に対して，$n \ge n_2$のとき，
-		\[
-			\frac{|b_1|+ \cdots + |b_{n_1-1}|}{n} <\varepsilon
-		\]
-		であるとすると，$n \ge \max \{ n_1,n_2\}$のとき，
-		\[
-			\frac{|b_1|+ \cdots + |b_{n_1-1}|}{n} < \varepsilon
-		\]
-		となる．
-		ゆえに，このとき，
-		\[
-			\left| \frac{ b_1 + b_2 + \cdots +b_n}{n} \right|　< \varepsilon+\varepsilon=2\varepsilon
-		\]
-		となる．ここまでの議論で，$\lim_{n \to \infty} b_n =0$のとき$\lim_{n \to \infty} \frac{ b_1 + b_2 + \cdots +b_n}{n} =0$であることが示されて，ただちに主張が従う．
-	\end{proof}
+    \begin{proof}
+    $\lim_{n \to \infty} a_n =a$であるから，
+    任意の$\varepsilon >0$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+    \[
+        n \ge n_1 \Longrightarrow \abs{a_n -a}<\varepsilon 
+    \]
+    となる．
+
+    また，
+    \[
+        \abs*{\frac{a_1+a_2+\cdots+a_n}{n}-a}= \abs*{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}}
+    \]
+    と変形する．この右辺から，
+    \[
+        \abs*{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \le \frac{\abs{(a_1-a)}+\abs{(a_2-a)}+\cdots+\abs{(a_n-a)}}{n}
+    \]
+    を得る．これにより，
+    \[
+        n \ge n_1 \Longrightarrow \frac{\abs{(a_1-a)}+\abs{(a_2-a)}+\cdots+\abs{(a_{n_1-1}-a)}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon 
+    \]
+    となる．ここで$n_2 \coloneqq n_1 +1$とすると，$n \ge n_2$であるとき$\left( \frac{n-n_1+1}{n} \right ) < \varepsilon$となることに注意する．さて，
+    \[
+        n \ge n_3 \Longrightarrow \frac{\abs{(a_1-a)}+\abs{(a_2-a)}+\cdots+\abs{(a_{n_1-1}-a)}}{n}<\varepsilon
+    \]
+    となるように$n_3 \in \mathbb{N}$をとる．$N \coloneqq \max \{n_2 , n_3\}$とすると，
+    \[
+        n \ge N \Longrightarrow \frac{\abs{(a_1-a)}+\abs{(a_2-a)}+\cdots+\abs{(a_{n_1-1}-a)}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon < \varepsilon + \varepsilon = 2 \varepsilon
+    \]
+    であり，これより
+    \[
+        n \ge N \Longrightarrow \abs*{\frac{a_1+a_2+\cdots+a_n}{n}-a} < 2 \varepsilon
+    \]
+    となる．書き換えると．
+    \[
+        \lim_{n \to \infty} \frac{a_1+a_2+\cdots+a_n}{n}=a
+    \]
+    となり，これが証明すべきことであった．
+    \end{proof}
 \end{leftbar}
 %
 \newpage
@@ -873,7 +869,20 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 \end{leftbar}
 \newpage
 \subsection{p63～64}
+1) (i)
+\begin{leftbar}
+    $a \ne 0$の場合をまず考える．$\delta \le \frac{\abs{a}}{2}$とすると，$\abs{x-a}<\delta$より
+    \[
+       \abs{x} > \abs{a}-\delta \ge \frac{\abs{a}}{2}
+    \]
+    である．これに留意すると，
+    \[
+        \abs*{\frac{1}{x}-\frac{1}{a}}=\frac{\abs{a-x}}{\abs{ax}} <\frac{2 \delta}{\abs{a}^2}
+    \]
+    であるから，$a=0$の場合も含めて，$\delta \coloneqq \min \{ \abs{a}/2,\abs{a}^2\varepsilon/2 \}$でよい．
+\end{leftbar}
 
+\newpage 
 2) (i)
 \begin{leftbar}
     $\abs*{\sin \frac{1}{x}} \le 1$，$\abs*{\sin \frac{1}{y}} \le 1$であるから，
