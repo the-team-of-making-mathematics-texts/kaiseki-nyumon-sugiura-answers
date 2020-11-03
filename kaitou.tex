@@ -341,7 +341,7 @@ p16 3)
     \[
         n \ge n_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon 
     \]
-    となる．ここで$n_2 \coloneqq n_1 +1$とすると，$n \ge n_2$であるとき$\left( \frac{n-n_1+1}{n} \right ) < \varepsilon$となることに注意する．さて，
+    となる．ここで$n_2 \coloneqq n_1 +1$とすると，$n \ge n_2$であるとき$\left( \frac{n-n_1+1}{n} \right ) \varepsilon < \varepsilon$となることに注意する．さて，
     \[
         n \ge n_3 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n}<\varepsilon
     \]
@@ -943,7 +943,7 @@ p63 1) (iii)
     が成立する．また，$t \le a$であるから，
     \begin{gather*}
         e^t \le e^a \\
-        \therefore ~ e^t(e^{\abs{x-a}}-1)<e^a(e^{\abs{x-a}}-1)
+        \therefore ~ e^t(e^{\abs{x-a}}-1) \le e^a(e^{\abs{x-a}}-1)
     \end{gather*}
     ゆえに，
     \[
