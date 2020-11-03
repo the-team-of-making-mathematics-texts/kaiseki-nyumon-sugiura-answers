@@ -934,6 +934,28 @@ p63 1) (ii)
     となる．ここで\hyperref[lem:三角関数の不等式]{補題の不等式}を用いた．これから，答えは$\delta = \varepsilon$でよい．
 \end{leftbar}
 
+p63 1) (iii)
+\begin{leftbar}
+    $t \coloneqq \min \{x,a\}$とする．このとき，指数法則により，
+    \[
+        \abs{e^x-e^a}=e^t (e^{\abs{x-a}}-1)
+    \]
+    が成立する．また，$t \le a$であるから，
+    \begin{gather*}
+        e^t \le e^a \\
+        \therefore ~ e^t(e^{\abs{x-a}}-1)<e^a(e^{\abs{x-a}}-1)
+    \end{gather*}
+    ゆえに，
+    \[
+        \varepsilon = e^a (e^\delta -1)
+    \]
+    となればよい．すなわち，
+    \[
+        \delta = \log (1+e^{-a}\varepsilon)
+    \]
+    である．
+\end{leftbar}
+
 \newpage 
 2) (i)
 \begin{leftbar}
