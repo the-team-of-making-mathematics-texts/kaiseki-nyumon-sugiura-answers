@@ -285,7 +285,41 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
 %
 \newpage
 %
-3)
+p16 3)
+\begin{lemm}
+    \label{lem:三角不等式の拡張}
+    任意の$a_1 , a_2 , \dots a_n \in \mathbb{R}$について，
+    \[
+        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
+    \]
+    が成り立つ．
+\end{lemm}
+
+\begin{proof}
+    $n=2$のときは三角不等式そのものである．
+    
+    $n \ge 3$とし，$n-1$個の実数については\hyperref[lem:三角不等式の拡張]{補題}の主張が成り立つものとする．
+
+    いま，
+    \[
+        a_1 + a_2 + \dots + a_n = (a_1+a_2+\dots+a_{n-1})+a_n
+    \]
+    であるから，これに三角不等式を適用して，
+    \[
+        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1+a_2+\dots+a_{n-1}} +\abs{a_n}
+    \]
+    を得る．ここで，数学的帰納法の仮定より，
+    \[
+        \abs{a_1+a_2+\dots+a_{n-1}} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_{n-1}}
+    \]
+    がいえるので，ここまでの議論で，
+    \[
+        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
+    \]
+    は$n$の場合にも成り立つことが示され．以上の議論より\hyperref[lem:三角不等式の拡張]{補題}の主張が従う．
+\end{proof}
+
+\newpage 
 \begin{leftbar}
     \begin{proof}
     $\lim_{n \to \infty} a_n =a$であるから，
@@ -299,7 +333,7 @@ $x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とす
     \[
         \abs*{\frac{a_1+a_2+\cdots+a_n}{n}-a}= \abs*{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}}
     \]
-    と変形する．この右辺から，
+    と変形する．この右辺に\hyperref[lem:三角不等式の拡張]{補題}を適用し，，
     \[
         \abs*{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \le \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}
     \]
